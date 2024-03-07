@@ -1,0 +1,33 @@
+{
+    "name": "@coderan/cui-react",
+    "version": "1.0.0",
+    "description": "",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "rm -rf dist && vite build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "exports": {
+        ".": {
+            "types": "./src/index.ts",
+            "require": "./build/index.js",
+            "import": "./src/index.ts"
+        }
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@emotion/react": "^11.11.3",
+        "clsx": "^2.1.0",
+        "react": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/react": "^18.2.45"
+    },
+    "files": [
+        "dist"
+    ]
+}
