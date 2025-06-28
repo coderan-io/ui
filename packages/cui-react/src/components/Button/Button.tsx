@@ -1,5 +1,6 @@
 import type { FC, PropsWithChildren, ReactNode } from 'react';
 import { clsx } from 'clsx';
+import { LoadingIcon } from '../LoadingIcon';
 import '@coderan/cui-styles/src/components/buttons.scss';
 
 export type ButtonProps = {
@@ -28,7 +29,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
             {...props}
         >
             {iconStart && <i className="cui-button__icon cui-button__icon--start">{iconStart}</i>}
-            {children}
+            <span className="cui-button__text">{children}</span>
             {iconEnd && <i className="cui-button__icon cui-button__icon--end">{iconEnd}</i>}
         </button>
     )

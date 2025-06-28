@@ -1,6 +1,10 @@
+@use "../utilities/colors";
+
 :root {
     --cui-default-border-radius: 5px;
 
-    //    Buttons
-    --cui-button-font-weight: 600;
+    // Buttons
+    --cui-primary-color: var(--cui-color-purple-600);
+    --cui-danger-color: var(--cui-color-red-600);
+    --cui-warning-color: var(--cui-color-amber-600);
 }

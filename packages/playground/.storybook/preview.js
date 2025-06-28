@@ -1,3 +1,4 @@
+import '../../styles/src/themes/coderan.scss';
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
