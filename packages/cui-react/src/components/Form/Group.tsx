@@ -1,9 +1,11 @@
 import { FC, HTMLAttributes, PropsWithChildren, useId } from 'react';
-import { clsx } from 'clsx';
+import { ClassValue, clsx } from 'clsx';
 import '@coderan/cui-styles/src/components/forms.scss';
 import { GroupProps } from './GroupProps';
 
-export type FormContainerProps = HTMLAttributes<HTMLDivElement> & GroupProps;
+export interface FormContainerProps extends GroupProps {
+    className?: ClassValue;
+}
 
 export const Group: FC<PropsWithChildren<FormContainerProps>> = ({
     children,
