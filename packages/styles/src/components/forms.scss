@@ -1,0 +1,87 @@
+:root {
+    --cui-form-input-border-color: var(--cui-color-gray-300);
+    --cui-form-input-border-color-focus: var(--cui-primary-color);
+
+    --cui-form-input-label-text-color: var(--cui-color-gray-700);
+    --cui-form-input-label-text-color-focus: var(--cui-primary-color);
+    --cui-form-input-background-color: var(--cui-background-color, #fff);
+}
+
+.cui-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.cui-form-field {
+    display: flex;
+    border: solid 1px var(--cui-form-input-border-color);
+    border-radius: var(--cui-default-border-radius);
+    position: relative;
+    padding: 0 0.9rem;
+    background-color: var(--cui-form-input-background-color);
+
+    &:focus-within {
+        border-color: var(--cui-form-input-border-color-focus);
+        border-width: 1px;
+
+        .cui-form-label {
+            color: var(--cui-form-input-label-text-color-focus);
+        }
+    }
+
+    &:focus-within, &.cui-form-field--has-value {
+        .cui-form-label {
+            top: 0.4rem;
+            margin-left: -0.25rem;
+            transform: scale(0.8) translateY(0);
+        }
+
+        .cui-form-input {
+            padding: 1.4rem 0 0.4rem 0;
+        }
+    }
+}
+
+.cui-form-input-wrapper {
+    position: relative;
+}
+
+.cui-form-input {
+    font-family: var(--cui-font-family), sans-serif;
+    padding: 0.9rem 0 0.9rem 0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border: none;
+    border-radius: var(--cui-default-border-radius);
+    outline: none;
+
+    &:not(:focus)::placeholder {
+        color: transparent;
+    }
+
+    &:focus {
+        padding: calc(0.9rem - 1px);
+    }
+}
+
+.cui-form-label {
+    font-family: var(--cui-font-family), sans-serif;
+    font-size: 0.9rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.1s;
+    color: var(--cui-form-input-label-text-color);
+}
+
+.cui-form_icon-start {
+    margin-right: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.cui-form_icon-end {
+    margin-left: 0.9rem;
+    display: flex;
+    align-items: center;
+}
