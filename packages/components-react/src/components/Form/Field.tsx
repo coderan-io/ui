@@ -9,6 +9,8 @@ export interface FormContainerProps extends FieldProps {
     inputId: string;
     hasValue?: boolean;
     className?: ClassValue;
+    controlWrapperClassName?: ClassValue;
+    labelAlwaysLikeFocus?: boolean;
 }
 
 export const Field: FC<PropsWithChildren<FormContainerProps>> = ({
@@ -16,8 +18,10 @@ export const Field: FC<PropsWithChildren<FormContainerProps>> = ({
     label,
     floatingLabel = true,
     className,
+    controlWrapperClassName,
     inputId,
     hasValue,
+    labelAlwaysLikeFocus,
     iconStart,
     iconEnd,
     hasError,
@@ -26,7 +30,7 @@ export const Field: FC<PropsWithChildren<FormContainerProps>> = ({
     return (
         <div className={clsx(
             'cui-form__field',
-            hasValue && 'cui-form__field--has-value',
+            (hasValue || labelAlwaysLikeFocus) && 'cui-form__field--has-value',
             hasError && 'cui-form__field--has-error',
             className,
         )} {...props}>
@@ -35,7 +39,12 @@ export const Field: FC<PropsWithChildren<FormContainerProps>> = ({
                     {iconStart}
                 </span>
             )}
-            <div className="cui-form-control__wrapper">
+            <div
+                className={clsx(
+                    'cui-form-control__wrapper',
+                    controlWrapperClassName,
+                )}
+            >
                 {floatingLabel && label && (
                     <label className="cui-form__label" htmlFor={inputId}>
                         {label}
