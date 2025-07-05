@@ -1,6 +1,6 @@
 import type { FC, PropsWithChildren, ReactNode } from 'react';
 import { clsx } from 'clsx';
-import '@coderan/cui-styles/src/components/buttons.scss';
+import '@coderan/component-styles/src/components/buttons.scss';
 
 export type ButtonProps = {
     variant: 'primary';

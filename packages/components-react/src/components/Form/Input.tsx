@@ -1,14 +1,15 @@
 import { FC, InputHTMLAttributes, useId, useState } from 'react';
 import { Field } from './Field';
-import '@coderan/cui-styles/src/components/forms.scss';
+import '@coderan/component-styles/src/components/forms.scss';
 import { FieldProps } from './FieldProps';
 import { Group } from './Group';
 import { GroupProps } from './GroupProps';
 import { ClassValue } from 'clsx';
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement>, FieldProps, GroupProps {
+export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>, FieldProps, GroupProps {
     groupClassName?: ClassValue;
     fieldClasName?: ClassValue;
+    onChange?: (value: string) => void;
 }
 
 export const Input: FC<InputProps> = ({
@@ -44,11 +45,12 @@ export const Input: FC<InputProps> = ({
             >
                 <input
                     type="text"
-                    className="cui-form__input"
+                    className="cui-form__control cui-form__input"
                     placeholder={placeholder}
                     aria-placeholder={placeholder}
                     aria-label={label}
                     id={inputId}
+                    // TODO onchange
                     onChange={(e) => setValue(e.target.value)}
                     value={value}
                 />
