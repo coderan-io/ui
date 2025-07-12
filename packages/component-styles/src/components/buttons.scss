@@ -4,7 +4,6 @@
     --cui-button-font-weight: 500;
     // primary
     --cui-button-primary-background-color: var(--cui-primary-color);
-    // make hover slightly darker
     --cui-button-primary-background-color-hover: hsl(from var(--cui-primary-color) h s calc(l * 0.90));
     --cui-button-primary-background-color-active: hsl(from var(--cui-primary-color) h s calc(l * 0.80));
     --cui-button-primary-background-color-loading: hsl(from var(--cui-primary-color) h s l / 0.20);
@@ -27,14 +26,14 @@
     --cui-button-danger-background-color-loading: hsl(from var(--cui-danger-color) h s l / 0.20);
     --cui-button-danger-text-color-loading: #fff;
     --cui-button-danger-loading-bar-background-color: var(--cui-button-danger-background-color);
-    //warning
-    --cui-button-warning-background-color: var(--cui-warning-color);
-    --cui-button-warning-background-color-hover: hsl(from var(--cui-warning-color) h s calc(l * 0.90));
-    --cui-button-warning-background-color-active: hsl(from var(--cui-warning-color) h s calc(l * 0.80));
-    --cui-button-warning-text-color: var(--cui-color-gray-800);
-    --cui-button-warning-background-color-loading: hsl(from var(--cui-warning-color) h s l / 0.20);
-    --cui-button-warning-text-color-loading: #fff;
-    --cui-button-warning-loading-bar-background-color: var(--cui-button-warning-background-color);
+    //success
+    --cui-button-success-background-color: var(--cui-success-color);
+    --cui-button-success-background-color-hover: hsl(from var(--cui-wsuccess-color) h s calc(l * 0.90));
+    --cui-button-success-background-color-active: hsl(from var(--cui-success-color) h s calc(l * 0.80));
+    --cui-button-success-text-color: var(--cui-color-gray-800);
+    --cui-button-success-background-color-loading: hsl(from var(--cui-success-color) h s l / 0.20);
+    --cui-button-success-text-color-loading: #fff;
+    --cui-button-success-loading-bar-background-color: var(--cui-button-success-background-color);
     // dark
     --cui-button-transparent-dark-background-color: transparent;
     --cui-button-transparent-dark-text-color: var(--cui-color-gray-900);
@@ -194,29 +193,29 @@
         }
     }
 
-    &.cui-button--warning {
-        background: var(--cui-button-warning-background-color);
-        border-color: var(--cui-button-warning-background-color);
-        color: var(--cui-button-warning-text-color);
+    &.cui-button--success {
+        background: var(--cui-button-success-background-color);
+        border-color: var(--cui-button-success-background-color);
+        color: var(--cui-button-success-text-color);
 
         &:hover {
-            background: var(--cui-button-warning-background-color-hover);
-            border-color: var(--cui-button-warning-background-color-hover);
+            background: var(--cui-button-success-background-color-hover);
+            border-color: var(--cui-button-success-background-color-hover);
         }
 
         &:active {
-            background: var(--cui-button-warning-background-color-active);
-            border-color: var(--cui-button-warning-background-color-active);
+            background: var(--cui-button-success-background-color-active);
+            border-color: var(--cui-button-success-background-color-active);
         }
 
         &.cui-button--loading {
-            background: var(--cui-button-warning-background-color-loading);
-            border-color: var(--cui-button-warning-background-color-loading);
-            color: var(--cui-button-warning-text-color-loading);
+            background: var(--cui-button-success-background-color-loading);
+            border-color: var(--cui-button-success-background-color-loading);
+            color: var(--cui-button-success-text-color-loading);
 
             &:after {
-                background: var(--cui-button-warning-background-color);
-                border-color: var(--cui-button-warning-background-color);
+                background: var(--cui-button-success-background-color);
+                border-color: var(--cui-button-success-background-color);
             }
         }
     }
