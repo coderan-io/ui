@@ -1,8 +1,8 @@
-@use "../utilities/animations" as animations;
+@import "../../animations/animations.css";
 
 :root {
     --cui-button-font-weight: 500;
-    // primary
+
     --cui-button-primary-background-color: var(--cui-primary-color);
     --cui-button-primary-background-color-hover: hsl(from var(--cui-primary-color) h s calc(l * 0.90));
     --cui-button-primary-background-color-active: hsl(from var(--cui-primary-color) h s calc(l * 0.80));
@@ -10,7 +10,7 @@
     --cui-button-primary-text-color: #fff;
     --cui-button-primary-text-color-loading: #fff;
     --cui-button-primary-loading-bar-background-color: var(--cui-button-primary-background-color);
-    //secondary
+
     --cui-button-secondary-background-color: transparent;
     --cui-button-secondary-background-color-hover: hsl(from var(--cui-primary-color) h s l / 0.20);
     --cui-button-secondary-background-color-active: hsl(from var(--cui-primary-color) h s l / 0.30);
@@ -18,7 +18,7 @@
     --cui-button-secondary-background-color-loading: transparent;
     --cui-button-secondary-text-color-loading: var(--cui-button-secondary-background-color-active);
     --cui-button-secondary-loading-bar-background-color: var(--cui-button-primary-background-color);
-    //danger
+
     --cui-button-danger-background-color: var(--cui-danger-color);
     --cui-button-danger-background-color-hover: hsl(from var(--cui-danger-color) h s calc(l * 0.90));
     --cui-button-danger-background-color-active: hsl(from var(--cui-danger-color) h s calc(l * 0.80));
@@ -26,15 +26,15 @@
     --cui-button-danger-background-color-loading: hsl(from var(--cui-danger-color) h s l / 0.20);
     --cui-button-danger-text-color-loading: #fff;
     --cui-button-danger-loading-bar-background-color: var(--cui-button-danger-background-color);
-    //success
+
     --cui-button-success-background-color: var(--cui-success-color);
-    --cui-button-success-background-color-hover: hsl(from var(--cui-wsuccess-color) h s calc(l * 0.90));
+    --cui-button-success-background-color-hover: hsl(from var(--cui-success-color) h s calc(l * 0.90));
     --cui-button-success-background-color-active: hsl(from var(--cui-success-color) h s calc(l * 0.80));
-    --cui-button-success-text-color: var(--cui-color-gray-800);
+    --cui-button-success-text-color: #fff;
     --cui-button-success-background-color-loading: hsl(from var(--cui-success-color) h s l / 0.20);
     --cui-button-success-text-color-loading: #fff;
     --cui-button-success-loading-bar-background-color: var(--cui-button-success-background-color);
-    // dark
+
     --cui-button-transparent-dark-background-color: transparent;
     --cui-button-transparent-dark-text-color: var(--cui-color-gray-900);
     --cui-button-transparent-dark-background-color-hover: rgba(0, 0, 0, 0.1);
@@ -42,7 +42,7 @@
     --cui-button-transparent-dark-background-color-loading: var(--cui-button-transparent-dark-background-color-hover);
     --cui-button-transparent-dark-text-color-loading: var(--cui-button-transparent-dark-background-color-active);
     --cui-button-transparent-dark-loading-bar-background-color: var(--cui-button-transparent-dark-text-color);
-    // light
+
     --cui-button-transparent-light-background-color: transparent;
     --cui-button-transparent-light-background-color-hover: rgba(255, 255, 255, 0.1);
     --cui-button-transparent-light-background-color-active: rgba(255, 255, 255, 0.2);
@@ -50,10 +50,9 @@
     --cui-button-transparent-light-background-color-loading: var(--cui-button-transparent-light-background-color-hover);
     --cui-button-transparent-light-text-color-loading: var(--cui-button-transparent-light-background-color-active);
     --cui-button-transparent-light-loading-bar-background-color: var(--cui-button-transparent-light-text-color);
-
 }
 
-.cui-button {
+.cuiButton {
     padding: 0.9rem;
     font-size: 0.9rem;
     line-height: 1.5;
@@ -66,11 +65,11 @@
     align-items: center;
     box-sizing: border-box;
 
-    .cui-button__text {
+    .cuiButtonText {
         white-space: nowrap;
     }
 
-    &.cui-button--loading {
+    &.cuiButton--loading {
         cursor: wait;
 
         &:after {
@@ -85,7 +84,7 @@
         }
     }
 
-    &.cui-button--primary {
+    &.cuiButton--primary {
         background-color: var(--cui-button-primary-background-color);
         border-color: var(--cui-button-primary-background-color);
         color: var(--cui-button-primary-text-color);
@@ -100,7 +99,7 @@
             border-color: var(--cui-button-primary-background-color-active);
         }
 
-        &.cui-button--loading {
+        &.cuiButton--loading {
             background: var(--cui-button-primary-background-color-loading);
             border-color: var(--cui-button-primary-background-color-loading);
             color: var(--cui-button-primary-text-color-loading);
@@ -112,7 +111,7 @@
         }
     }
 
-    &.cui-button--secondary {
+    &.cuiButton--secondary {
         background: var(--cui-button-secondary-background-color);
         border-color: var(--cui-button-secondary-background-color);
         color: var(--cui-button-secondary-text-color);
@@ -127,7 +126,7 @@
             border-color: var(--cui-button-secondary-background-color-active);
         }
 
-        &.cui-button--loading {
+        &.cuiButton--loading {
             background: var(--cui-button-secondary-background-color-loading);
             border-color: var(--cui-button-secondary-background-color-loading);
             color: var(--cui-button-secondary-text-color-loading);
@@ -139,7 +138,7 @@
         }
     }
 
-    &.cui-button--success {
+    &.cuiButton--success {
         background: var(--cui-button-success-color);
         border-color: var(--cui-button-success-color);
         color: var(--cui-button-success-text-color);
@@ -154,7 +153,7 @@
             border-color: var(--cui-button-success-color-active);
         }
 
-        &.cui-button--loading {
+        &.cuiButton--loading {
             background: var(--cui-button-success-color-loading);
             border-color: var(--cui-button-success-color-loading);
             color: var(--cui-button-success-text-color-loading);
@@ -166,7 +165,7 @@
         }
     }
 
-    &.cui-button--danger {
+    &.cuiButton--danger {
         background: var(--cui-button-danger-background-color);
         border-color: var(--cui-button-danger-background-color);
         color: var(--cui-button-danger-text-color);
@@ -181,7 +180,7 @@
             border-color: var(--cui-button-danger-background-color-active);
         }
 
-        &.cui-button--loading {
+        &.cuiButton--loading {
             background: var(--cui-button-danger-background-color-loading);
             border-color: var(--cui-button-danger-background-color-loading);
             color: var(--cui-button-danger-text-color-loading);
@@ -193,7 +192,7 @@
         }
     }
 
-    &.cui-button--success {
+    &.cuiButton--success {
         background: var(--cui-button-success-background-color);
         border-color: var(--cui-button-success-background-color);
         color: var(--cui-button-success-text-color);
@@ -208,7 +207,7 @@
             border-color: var(--cui-button-success-background-color-active);
         }
 
-        &.cui-button--loading {
+        &.cuiButton--loading {
             background: var(--cui-button-success-background-color-loading);
             border-color: var(--cui-button-success-background-color-loading);
             color: var(--cui-button-success-text-color-loading);
@@ -220,7 +219,7 @@
         }
     }
 
-    &.cui-button--transparent-dark {
+    &.cuiButton--transparent-dark {
         background: var(--cui-button-transparent-dark-background-color);
         border-color: var(--cui-button-transparent-dark-background-color);
         color: var(--cui-button-transparent-dark-text-color);
@@ -235,7 +234,7 @@
             border-color: var(--cui-button-transparent-dark-background-color-active);
         }
 
-        &.cui-button--loading {
+        &.cuiButton--loading {
             color: var(--cui-button-transparent-dark-text-color-loading);
             border-color: var(--cui-button-transparent-dark-background-color-loading);
             background: var(--cui-button-transparent-dark-background-color-loading);
@@ -247,7 +246,7 @@
         }
     }
 
-    &.cui-button--transparent-light {
+    &.cuiButton--transparent-light {
         background: var(--cui-button-transparent-light-background-color);
         border-color: var(--cui-button-transparent-light-background-color);
         color: var(--cui-button-transparent-light-text-color);
@@ -262,7 +261,7 @@
             border-color: var(--cui-button-transparent-light-background-color-active);
         }
 
-        &.cui-button--loading {
+        &.cuiButton--loading {
             color: var(--cui-button-transparent-light-text-color-loading);
             border-color: var(--cui-button-transparent-light-background-color-loading);
             background: var(--cui-button-transparent-light-background-color-loading);
@@ -274,19 +273,19 @@
         }
     }
 
-    .cui-button__icon {
+    .cuiButtonIcon {
         font-style: normal;
 
-        &.cui-button__icon--start {
+        &.cuiButtonIcon--start {
             margin-right: 0.5rem;
         }
 
-        &.cui-button__icon--end {
+        &.cuiButtonIcon--end {
             margin-left: 0.5rem;
         }
     }
 
-    &.cui-button--loading .cui-button__icon--start, &.cui-button--loading .cui-button__icon--end {
+    &.cuiButton--loading .cuiButtonIcon--start, &.cuiButton--loading .cuiButtonIcon--end {
         opacity: 0.5
     }
 }

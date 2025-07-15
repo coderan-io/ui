@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes, PropsWithChildren, useId } from 'react';
 import { ClassValue, clsx } from 'clsx';
-import '@coderan/component-styles/src/components/forms.scss';
+import styles from './form.module.css';
 import { GroupProps } from './GroupProps';
 
 export interface FormContainerProps extends GroupProps {
@@ -19,7 +19,7 @@ export const Group: FC<PropsWithChildren<FormContainerProps>> = ({
     return (
         <div
             className={clsx(
-                'cui-form__group',
+                styles.cuiFormGroup,
                 className,
             )}
             {...props}
@@ -27,13 +27,13 @@ export const Group: FC<PropsWithChildren<FormContainerProps>> = ({
             {children}
             {errorArray.map((error: string, index: number) => {
                 return (
-                    <div className="cui-form__error" key={index}>
+                    <div className={styles.cuiFormError} key={index}>
                         {error}
                     </div>
                 )
             })}
             {hint && (
-                <div className="cui-form__hint">
+                <div className={styles.cuiFormHint}>
                     {hint}
                 </div>
             )}
