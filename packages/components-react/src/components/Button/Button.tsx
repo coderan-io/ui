@@ -4,7 +4,7 @@ import styles from './button.module.css'
 
 export type ButtonProps = {
     variant: 'primary';
-    loading: boolean;
+    loading?: boolean;
     iconStart?: ReactNode;
     iconEnd?: ReactNode;
 }
