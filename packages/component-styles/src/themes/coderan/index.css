@@ -7,6 +7,7 @@
     --cui-font-family: "Inter";
 
     --cui-background-color: #fff;
+    --cui-text-color: var(--cui-color-gray-900);
 
     --cui-primary-color: var(--cui-color-blue-600);
     --cui-danger-color: var(--cui-color-red-900);
@@ -17,11 +18,11 @@
     :root {
         --cui-background-color: #1A1A1A;
         --cui-danger-color: var(--cui-color-red-200);
-        /*--cui-danger-color: #fb9ea1;*/
         --cui-success-color: var(--cui-color-green-400);
+        --cui-text-color: #ffffff;
     }
     html {
-        color: #ffffff;
+        color: var(--cui-text-color);
     }
 }
 

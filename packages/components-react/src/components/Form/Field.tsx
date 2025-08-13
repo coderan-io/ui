@@ -3,8 +3,6 @@ import { ClassValue, clsx } from 'clsx';
 import styles from './form.module.css';
 import { FieldProps } from './FieldProps';
 
-
-
 export interface FormContainerProps extends FieldProps {
     inputId: string;
     hasValue?: boolean;

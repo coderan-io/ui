@@ -4,10 +4,17 @@
 
     --cui-form-input-label-text-color: var(--cui-color-gray-700);
     --cui-form-input-label-text-color-focus: var(--cui-primary-color);
-    --cui-form-input-background-color: var(--cui-background-color, #fff);
+    --cui-form-input-background-color: var(--cui-background-color);
 
     --cui-form-hint-text-color: var(--cui-color-gray-500);
     --cui-form-error-text-color: var(--cui-danger-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cui-form-input-border-color: var(--cui-color-gray-700);
+        --cui-form-input-label-text-color: var(--cui-color-gray-500);
+    }
 }
 
 .cuiFormGroup {
@@ -17,13 +24,13 @@
 
 .cuiFormField {
     display: flex;
-    border: solid 1px var(--cui-form-input-border-color);
+    box-shadow: inset 0 0 0 1px var(--cui-form-input-border-color);
     border-radius: var(--cui-default-border-radius);
     position: relative;
     background-color: var(--cui-form-input-background-color);
 
     &:focus-within {
-        border-color: var(--cui-form-input-border-color-focus);
+        box-shadow: inset 0 0 0 1px var(--cui-form-input-border-color-focus);
         border-width: 1px;
 
         .cuiFormLabel {
@@ -48,8 +55,8 @@
         }
     }
 
-    &.cuiForm--error {
-        border-color: var(--cui-danger-color);
+    &.cuiFormField--error {
+        box-shadow: inset 0 0 0 1px var(--cui-danger-color);
 
         .cuiFormLabel {
             color: var(--cui-danger-color);
@@ -74,7 +81,8 @@
     border-radius: var(--cui-default-border-radius);
     outline: none;
     min-width: 180px;
-    background: var(--cui-form-input-background-color);
+    background: transparent;
+    color: var(--cui-text-color);
 
     &:focus {
         padding: calc(0.9rem - 1px);
@@ -102,6 +110,16 @@
         top: 50%;
         transform: translateY(-50%);
         pointer-events: none;
+        fill: #fff;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .cuiSelectWrapper {
+        &:after {
+            color: #fff;
+            background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNy4yIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjUgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTIzMy40IDQwNi42YzEyLjUgMTIuNSAzMi44IDEyLjUgNDUuMyAwbDE5Mi0xOTJjMTIuNS0xMi41IDEyLjUtMzIuOCAwLTQ1LjNzLTMyLjgtMTIuNS00NS4zIDBMMjU2IDMzOC43IDg2LjYgMTY5LjRjLTEyLjUtMTIuNS0zMi44LTEyLjUtNDUuMyAwcy0xMi41IDMyLjggMCA0NS4zbDE5MiAxOTJ6IiBmaWxsPSIjZmZmIi8+PC9zdmc+");
+        }
     }
 }
 
