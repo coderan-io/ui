@@ -1,9 +1,11 @@
 import type { FC, PropsWithChildren, ReactNode } from 'react';
 import { clsx } from 'clsx';
 import styles from './button.module.css'
+import { ButtonColor } from './ButtonColor'
+import { ValueOf } from '../../utilities/types';
 
 export type ButtonProps = {
-    variant: 'primary';
+    color: ValueOf<typeof ButtonColor>;
     loading?: boolean;
     iconStart?: ReactNode;
     iconEnd?: ReactNode;
@@ -12,17 +14,16 @@ export type ButtonProps = {
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({
     children,
     loading,
-    variant,
+    color,
     iconStart,
     iconEnd,
     ...props
 }) => {
-
     return (
         <button
             className={clsx(
                 styles.cuiButton,
-                styles[`cuiButton--${variant}`],
+                styles[`cuiButton--${color}`],
                 loading && styles['cuiButton--loading'],
             )}
             {...props}
