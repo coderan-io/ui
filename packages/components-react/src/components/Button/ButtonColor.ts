@@ -1,9 +1,9 @@
-import { Color } from '../../utilities/Color';
+import { Variant } from '../../utilities/Variant';
 
 
-export const ButtonColor: Partial<typeof Color> = {
-    SUCCESS: Color.SUCCESS,
-    DANGER: Color.DANGER,
-    PRIMARY: Color.PRIMARY,
-    SECONDARY: Color.SECONDARY,
+export const ButtonColor: typeof Variant = {
+    SUCCESS: Variant.SUCCESS,
+    DANGER: Variant.DANGER,
+    PRIMARY: Variant.PRIMARY,
+    SECONDARY: Variant.SECONDARY,
 };
