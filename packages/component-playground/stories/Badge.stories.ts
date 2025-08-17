@@ -1,4 +1,4 @@
-import { Badge as BadgeComponent, ButtonColor, Color } from '@coderan/components-react';
+import { Badge as BadgeComponent, BadgeColor } from '@coderan/components-react';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
@@ -19,7 +19,7 @@ export default {
     argTypes: {
         color: {
             type: 'select',
-            options: Object.values(Color)
+            options: Object.values(BadgeColor)
         }
     }
 };
@@ -27,7 +27,7 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Badge = {
     args: {
-        color: Color.RED,
+        color: BadgeColor.RED,
         children: 'Red badge'
     }
 };
