@@ -1,6 +1,5 @@
 {
     "name": "@coderan/components-react",
-    "private": true,
     "version": "1.0.0",
     "description": "",
     "module": "dist/index.mjs",

@@ -9,7 +9,7 @@
     --cui-background-color: #fff;
     --cui-text-color: var(--cui-color-gray-900);
 
-    --cui-primary-color: var(--cui-color-blue-600);
+    --cui-primary-color: var(--cui-color-deep-purple-300);
     --cui-danger-color: var(--cui-color-red-900);
     --cui-success-color: var(--cui-color-light-green-900);
 }
