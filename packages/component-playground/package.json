@@ -11,6 +11,9 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
+    "files": [
+        "storybook-static"
+    ],
     "devDependencies": {
         "@storybook/addon-links": "^9.0.15",
         "@storybook/react-vite": "^9.0.15",
@@ -22,5 +25,6 @@
     },
     "dependencies": {
         "@storybook/addon-docs": "^9.0.15"
-    }
+    },
+    "gitHead": "ad8739d6d414df48dca9ef16f084711ddc07dd00"
 }
