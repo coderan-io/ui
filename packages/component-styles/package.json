@@ -20,6 +20,7 @@
         "sass": "^1.71.1"
     },
     "dependencies": {
+        "cssnano-preset-lite": "^4.0.4",
         "lerna": "9.0.3",
         "vite": "7.3.0",
         "vite-plugin-dts": "4.5.4"
