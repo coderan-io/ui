@@ -1,18 +1,17 @@
 {
     "name": "@coderan/component-playground",
     "version": "0.1.1",
-    "description": "",
-    "main": "index.js",
+    "description": "Playground for Coderan UI components",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "storybook": "storybook dev -p 6006",
-        "build": "storybook build"
+        "start": "storybook dev -p 6006"
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Eran <info@coderan.nl>",
+    "license": "MIT",
     "files": [
-        "storybook-static"
+        "stories",
+        ".storybook"
     ],
     "devDependencies": {
         "@storybook/addon-links": "^9.0.15",
@@ -29,5 +28,5 @@
     "publishConfig": {
         "access": "public"
     },
-    "gitHead": "ad8739d6d414df48dca9ef16f084711ddc07dd00"
+    "gitHead": "cc1ea3889656c5a859c5f5b157542bf0ef9ef817"
 }
