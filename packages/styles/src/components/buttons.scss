@@ -1,59 +1,56 @@
 @use "../utilities/animations" as animations;
-@use "../utilities/colors" as colors;
-@use "../utilities/variables" as variables;
-@use "sass:color";
 
 :root {
-    --cui-default-border-radius: #{variables.$default-border-radius};
     --cui-button-font-weight: 500;
     // primary
-    --cui-button-primary-color: #{colors.get(variables.$primary-color, 500)};
+    --cui-button-primary-background-color: var(--cui-primary-color);
+    // make hover slightly darker
+    --cui-button-primary-background-color-hover: hsl(from var(--cui-primary-color) h s calc(l * 0.90));
+    --cui-button-primary-background-color-active: hsl(from var(--cui-primary-color) h s calc(l * 0.80));
+    --cui-button-primary-background-color-loading: hsl(from var(--cui-primary-color) h s l / 0.20);
     --cui-button-primary-text-color: #fff;
-    --cui-button-primary-hover-color: #{colors.get(variables.$primary-color, 600)};
-    --cui-button-primary-active-color: #{colors.get(variables.$primary-color, 700)};
-    --cui-button-primary-loading-color: #{color.adjust(colors.get(variables.$primary-color, 500), $alpha: -0.80)};
-    --cui-button-primary-loading-text-color: #fff;
-    --cui-button-primary-loading-bar-color: var(--cui-button-primary-color);
+    --cui-button-primary-text-color-loading: #fff;
+    --cui-button-primary-loading-bar-background-color: var(--cui-button-primary-background-color);
     //secondary
-    --cui-button-secondary-color: transparent;
-    --cui-button-secondary-hover-color: #{color.adjust(colors.get(variables.$primary-color, 500), $alpha: -0.80)};
-    --cui-button-secondary-active-color: #{color.adjust(colors.get(variables.$primary-color, 500), $alpha: -0.70)};
-    --cui-button-secondary-text-color: var(--cui-button-primary-color);
-    --cui-button-secondary-loading-color: transparent;
-    --cui-button-secondary-loading-text-color: var(--cui-button-secondary-active-color);
-    --cui-button-secondary-loading-bar-color: var(--cui-button-primary-color);
+    --cui-button-secondary-background-color: transparent;
+    --cui-button-secondary-background-color-hover: hsl(from var(--cui-primary-color) h s l / 0.20);
+    --cui-button-secondary-background-color-active: hsl(from var(--cui-primary-color) h s l / 0.30);
+    --cui-button-secondary-text-color: var(--cui-button-primary-background-color);
+    --cui-button-secondary-background-color-loading: transparent;
+    --cui-button-secondary-text-color-loading: var(--cui-button-secondary-background-color-active);
+    --cui-button-secondary-loading-bar-background-color: var(--cui-button-primary-background-color);
     //danger
-    --cui-button-danger-color: #{colors.get('red', 700)};
+    --cui-button-danger-background-color: var(--cui-danger-color);
+    --cui-button-danger-background-color-hover: hsl(from var(--cui-danger-color) h s calc(l * 0.90));
+    --cui-button-danger-background-color-active: hsl(from var(--cui-danger-color) h s calc(l * 0.80));
     --cui-button-danger-text-color: #fff;
-    --cui-button-danger-hover-color: #{colors.get('red', 800)};
-    --cui-button-danger-active-color: #{colors.get('red', 900)};
-    --cui-button-danger-loading-color: #{color.adjust(colors.get('red', 700), $alpha: -0.80)};
-    --cui-button-danger-loading-text-color: #fff;
-    --cui-button-danger-loading-bar-color: var(--cui-button-danger-color);
+    --cui-button-danger-background-color-loading: hsl(from var(--cui-danger-color) h s l / 0.20);
+    --cui-button-danger-text-color-loading: #fff;
+    --cui-button-danger-loading-bar-background-color: var(--cui-button-danger-background-color);
     //warning
-    --cui-button-warning-color: #{colors.get('amber', 600)};
-    --cui-button-warning-text-color: #{colors.get('gray', 800)};
-    --cui-button-warning-hover-color: #{colors.get('amber', 700)};
-    --cui-button-warning-active-color: #{colors.get('amber', 800)};
-    --cui-button-warning-loading-color: #{color.adjust(colors.get('amber', 600), $alpha: -0.80)};
-    --cui-button-warning-loading-text-color: #fff;
-    --cui-button-warning-loading-bar-color: var(--cui-button-warning-color);
+    --cui-button-warning-background-color: var(--cui-warning-color);
+    --cui-button-warning-background-color-hover: hsl(from var(--cui-warning-color) h s calc(l * 0.90));
+    --cui-button-warning-background-color-active: hsl(from var(--cui-warning-color) h s calc(l * 0.80));
+    --cui-button-warning-text-color: var(--cui-color-gray-800);
+    --cui-button-warning-background-color-loading: hsl(from var(--cui-warning-color) h s l / 0.20);
+    --cui-button-warning-text-color-loading: #fff;
+    --cui-button-warning-loading-bar-background-color: var(--cui-button-warning-background-color);
     // dark
-    --cui-button-transparent-dark-color: transparent;
-    --cui-button-transparent-dark-text-color: #{variables.$dark-text-color};
-    --cui-button-transparent-dark-hover-color: rgba(0, 0, 0, 0.1);
-    --cui-button-transparent-dark-active-color: rgba(0, 0, 0, 0.2);
-    --cui-button-transparent-dark-loading-color: var(--cui-button-transparent-dark-hover-color);
-    --cui-button-transparent-dark-loading-text-color: var(--cui-button-transparent-dark-active-color);
-    --cui-button-transparent-dark-loading-bar-color: var(--cui-button-transparent-dark-text-color);
+    --cui-button-transparent-dark-background-color: transparent;
+    --cui-button-transparent-dark-text-color: var(--cui-color-gray-900);
+    --cui-button-transparent-dark-background-color-hover: rgba(0, 0, 0, 0.1);
+    --cui-button-transparent-dark-background-color-active: rgba(0, 0, 0, 0.2);
+    --cui-button-transparent-dark-background-color-loading: var(--cui-button-transparent-dark-background-color-hover);
+    --cui-button-transparent-dark-text-color-loading: var(--cui-button-transparent-dark-background-color-active);
+    --cui-button-transparent-dark-loading-bar-background-color: var(--cui-button-transparent-dark-text-color);
     // light
-    --cui-button-transparent-light-color: transparent;
-    --cui-button-transparent-light-text-color: #{variables.$light-text-color};
-    --cui-button-transparent-light-hover-color: rgba(255, 255, 255, 0.1);
-    --cui-button-transparent-light-active-color: rgba(255, 255, 255, 0.2);
-    --cui-button-transparent-light-loading-color: var(--cui-button-transparent-light-hover-color);
-    --cui-button-transparent-light-loading-text-color: var(--cui-button-transparent-light-active-color);
-    --cui-button-transparent-light-loading-bar-color: var(--cui-button-transparent-light-text-color);
+    --cui-button-transparent-light-background-color: transparent;
+    --cui-button-transparent-light-background-color-hover: rgba(255, 255, 255, 0.1);
+    --cui-button-transparent-light-background-color-active: rgba(255, 255, 255, 0.2);
+    --cui-button-transparent-light-text-color: #fff;
+    --cui-button-transparent-light-background-color-loading: var(--cui-button-transparent-light-background-color-hover);
+    --cui-button-transparent-light-text-color-loading: var(--cui-button-transparent-light-background-color-active);
+    --cui-button-transparent-light-loading-bar-background-color: var(--cui-button-transparent-light-text-color);
 
 }
 
@@ -66,6 +63,10 @@
     border: none;
     display: inline-flex;
     align-items: center;
+
+    .cui-button__text {
+        white-space: nowrap;
+    }
 
     &.cui-button--loading {
         cursor: wait;
@@ -83,45 +84,45 @@
     }
 
     &.cui-button--primary {
-        background-color: var(--cui-button-primary-color);
+        background-color: var(--cui-button-primary-background-color);
         color: var(--cui-button-primary-text-color);
 
         &:hover {
-            background: var(--cui-button-primary-hover-color);
+            background: var(--cui-button-primary-background-color-hover);
         }
 
         &:active {
-            background: var(--cui-button-primary-active-color);
+            background: var(--cui-button-primary-background-color-active);
         }
 
         &.cui-button--loading {
-            background: var(--cui-button-primary-loading-color);
-            color: var(--cui-button-primary-loading-text-color);
+            background: var(--cui-button-primary-background-color-loading);
+            color: var(--cui-button-primary-text-color-loading);
 
             &:after {
-                background: var(--cui-button-primary-loading-bar-color);
+                background: var(--cui-button-primary-loading-bar-background-color);
             }
         }
     }
 
     &.cui-button--secondary {
-        background: var(--cui-button-secondary-color);
+        background: var(--cui-button-secondary-background-color);
         color: var(--cui-button-secondary-text-color);
 
         &:hover {
-            background: var(--cui-button-secondary-hover-color);
+            background: var(--cui-button-secondary-background-color-hover);
         }
 
         &:active {
-            background: var(--cui-button-secondary-active-color);
+            background: var(--cui-button-secondary-background-color-active);
         }
 
         &.cui-button--loading {
-            background: var(--cui-button-secondary-loading-color);
-            color: var(--cui-button-secondary-loading-text-color);
+            background: var(--cui-button-secondary-background-color-loading);
+            color: var(--cui-button-secondary-text-color-loading);
 
             &:after {
-                background: var(--cui-button-secondary-loading-bar-color);
+                background: var(--cui-button-secondary-loading-bar-background-color);
             }
         }
     }
@@ -149,89 +150,89 @@
     }
 
     &.cui-button--danger {
-        background: var(--cui-button-danger-color);
+        background: var(--cui-button-danger-background-color);
         color: var(--cui-button-danger-text-color);
 
         &:hover {
-            background: var(--cui-button-danger-hover-color);
+            background: var(--cui-button-danger-background-color-hover);
         }
 
         &:active {
-            background: var(--cui-button-danger-active-color);
+            background: var(--cui-button-danger-background-color-active);
         }
 
         &.cui-button--loading {
-            background: var(--cui-button-danger-loading-color);
-            color: var(--cui-button-danger-loading-text-color);
+            background: var(--cui-button-danger-background-color-loading);
+            color: var(--cui-button-danger-text-color-loading);
 
             &:after {
-                background: var(--cui-button-danger-color);
+                background: var(--cui-button-danger-background-color);
             }
         }
     }
 
     &.cui-button--warning {
-        background: var(--cui-button-warning-color);
+        background: var(--cui-button-warning-background-color);
         color: var(--cui-button-warning-text-color);
 
         &:hover {
-            background: var(--cui-button-warning-hover-color);
+            background: var(--cui-button-warning-background-color-hover);
         }
 
         &:active {
-            background: var(--cui-button-warning-active-color);
+            background: var(--cui-button-warning-background-color-active);
         }
 
         &.cui-button--loading {
-            background: var(--cui-button-warning-loading-color);
-            color: var(--cui-button-warning-loading-text-color);
+            background: var(--cui-button-warning-background-color-loading);
+            color: var(--cui-button-warning-text-color-loading);
 
             &:after {
-                background: var(--cui-button-warning-color);
+                background: var(--cui-button-warning-background-color);
             }
         }
     }
 
     &.cui-button--transparent-dark {
-        background: var(--cui-button-transparent-dark-color);
+        background: var(--cui-button-transparent-dark-background-color);
         color: var(--cui-button-transparent-dark-text-color);
 
         &:hover {
-            background: var(--cui-button-transparent-dark-hover-color);
+            background: var(--cui-button-transparent-dark-background-color-hover);
         }
 
         &:active {
-            background: var(--cui-button-transparent-dark-active-color);
+            background: var(--cui-button-transparent-dark-background-color-active);
         }
 
         &.cui-button--loading {
-            color: var(--cui-button-transparent-dark-loading-text-color);
-            background: var(--cui-button-transparent-dark-loading-color);
+            color: var(--cui-button-transparent-dark-text-color-loading);
+            background: var(--cui-button-transparent-dark-background-color-loading);
 
             &:after {
-                background: var(--cui-button-transparent-dark-loading-bar-color);
+                background: var(--cui-button-transparent-dark-loading-bar-background-color);
             }
         }
     }
 
     &.cui-button--transparent-light {
-        background: var(--cui-button-transparent-light-color);
+        background: var(--cui-button-transparent-light-background-color);
         color: var(--cui-button-transparent-light-text-color);
 
         &:hover {
-            background: var(--cui-button-transparent-light-hover-color);
+            background: var(--cui-button-transparent-light-background-color-hover);
         }
 
         &:active {
-            background: var(--cui-button-transparent-light-active-color);
+            background: var(--cui-button-transparent-light-background-color-active);
         }
 
         &.cui-button--loading {
-            color: var(--cui-button-transparent-light-loading-text-color);
-            background: var(--cui-button-transparent-light-loading-color);
+            color: var(--cui-button-transparent-light-text-color-loading);
+            background: var(--cui-button-transparent-light-background-color-loading);
 
             &:after {
-                background: var(--cui-button-transparent-light-loading-bar-color);
+                background: var(--cui-button-transparent-light-loading-bar-background-color);
             }
         }
     }
