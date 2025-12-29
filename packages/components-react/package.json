@@ -1,6 +1,6 @@
 {
     "name": "@coderan/components-react",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "description": "",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
@@ -20,7 +20,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@coderan/component-styles": "^1.0.0",
+        "@coderan/component-styles": "^0.1.0",
         "clsx": "^2.1.0",
         "react": "^19.1.0"
     },
