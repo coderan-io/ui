@@ -1,53 +1,40 @@
 import { FC, HTMLAttributes, PropsWithChildren, useId } from 'react';
 import { clsx } from 'clsx';
 import '@coderan/cui-styles/src/components/forms.scss';
-import { GenericFormFieldProps } from './GenericFormFieldProps';
+import { GroupProps } from './GroupProps';
 
-
-
-export interface FormContainerProps extends HTMLAttributes<HTMLDivElement>, GenericFormFieldProps {
-    inputId: string;
-    hasValue?: boolean;
-}
+export type FormContainerProps = HTMLAttributes<HTMLDivElement> & GroupProps;
 
 export const Group: FC<PropsWithChildren<FormContainerProps>> = ({
     children,
-    label,
-    floatingLabel = true,
-    className, // TODO propagate class name to proper element
-    inputId,
-    hasValue,
-    iconStart,
-    iconEnd,
+    className,
+    hint,
+    errors,
     ...props
 }) => {
-    return (
-        <div className={clsx('cui-form-group')}>
-            <div className={clsx(
-                'cui-form-field',
-                hasValue && 'cui-form-field--has-value',
-                className,
-            )} {...props}>
-                {iconStart && (
-                    <span className="cui-form_icon-start">
-                        {iconStart}
-                    </span>
-                )}
-                <div className="cui-form-input-wrapper">
-                    {floatingLabel && label && (
-                        <label className="cui-form-label" htmlFor={inputId}>
-                            {label}
-                        </label>
-                    )}
-                    {children}
-                </div>
-                {iconEnd && (
-                    <span className="cui-form_icon-end">
-                        {iconEnd}
-                    </span>
-                )}
-            </div>
-        </div>
+    const errorArray = errors ? (Array.isArray(errors) ? errors : [errors]) : [];
 
+    return (
+        <div
+            className={clsx(
+                'cui-form__group',
+                className,
+            )}
+            {...props}
+        >
+            {children}
+            {errorArray.map((error: string, index: number) => {
+                return (
+                    <div className="cui-form__error" key={index}>
+                        {error}
+                    </div>
+                )
+            })}
+            {hint && (
+                <div className="cui-form__hint">
+                    {hint}
+                </div>
+            )}
+        </div>
     )
 }

@@ -5,7 +5,7 @@ export default {
     title: 'Example/Form',
     component: Input,
     args: {
-        label: 'Input'
+        label: 'Input',
     },
     parameters: {
         // Optional parameter to center the component in the Canvas. More info:
@@ -29,6 +29,14 @@ export default {
             type: 'select',
             // font awesome icons as options
             options: ['👠', '👡', '👢', '👣', '👤', '👥', '👦', '👧', '👨', '👩', '👪', '👫', '👬', '👭', '👮', '👯', '👰', '👱', '👲', '👳', '👴', '👵', '👶', '👷', '👸', '👹', '👺', '👻', '👼', '👽', '👾', '👿', '💀', '💁', '💂', '💃', '💄', '💅', '💆', '💇', '💈', '💉', '💊', '💋', '💌', '💍', '💎', '💏', '💐', '💑', '💒', '💓', '💔', '💕', '💖', '💗', '💘', '💙', '💚', '💛', '💜', '💝', '💞', '💟', '💠', '💡', '💢', '💣', '💤', '💥', '💦', '💧', '💨', '💩', '💪', '💫', '💬', '💭', '💮', '💯', '💰', '💱', '💲', '💳', '💴', '💵', '💶', '💷', '💸', '💹', '💺', '💻', '💼', '💽', '💾', '💿', '📀', '📁', '📂', '📃', '📄', '📅', '📆', '📇', '📈', '📉', '📊',]
+        },
+        hint: {
+            control: 'text',
+            description: 'Additional hint text to display below the field, typically used for additional instructions or information. Default theme styles these as gray text.'
+        },
+        errors: {
+            //allow multiple errors
+            control: 'text',
         }
     }
 };

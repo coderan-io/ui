@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-export interface GenericFormFieldProps {
+export interface FieldProps {
     /**
      * Label describing the field. This label comes in two flavors:
      * - Floating label (default): the label is displayed above the field when it is focused or has a value.
@@ -19,15 +19,6 @@ export interface GenericFormFieldProps {
      */
     placeholder?: string;
     /**
-     * Error message(s) to display below the field. Default theme styles these as red text.
-     */
-    errors?: string | string[];
-    /**
-     * Additional hint text to display below the field, typically used for additional instructions or information.
-     * Default theme styles these as gray text.
-     */
-    hint?: string;
-    /**
      * Icon to display at the start of the field, typically used for visual cues or branding.
      */
     iconStart?: ReactNode;
@@ -35,4 +26,8 @@ export interface GenericFormFieldProps {
      * Icon to display at the end of the field, typically used for actions like clearing the field or showing additional options.
      */
     iconEnd?: ReactNode;
+    /**
+     * Indicates whether the field has an error.
+     */
+    hasError?: boolean;
 }
