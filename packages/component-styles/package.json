@@ -1,7 +1,7 @@
 {
     "name": "@coderan/component-styles",
     "version": "0.1.1",
-    "description": "",
+    "description": "Themes for Coderan UI components",
     "scripts": {
         "build": "gulp build",
         "watch": "gulp watch"
@@ -10,8 +10,8 @@
         "dist"
     ],
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Eran <info@coderan.nl>",
+    "license": "MIT",
     "devDependencies": {
         "autoprefixer": "^10.4.18",
         "cssnano": "^6.0.5",
@@ -20,13 +20,8 @@
         "gulp-postcss": "^10.0.0",
         "gulp-sass": "^5.1.0",
         "postcss": "^8.4.35",
-        "sass": "^1.71.1"
-    },
-    "dependencies": {
-        "cssnano-preset-lite": "^4.0.4",
-        "lerna": "9.0.3",
-        "vite": "7.3.0",
-        "vite-plugin-dts": "4.5.4"
+        "sass": "^1.71.1",
+        "cssnano-preset-lite": "^4.0.4"
     },
     "publishConfig": {
         "access": "public"
