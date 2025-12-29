@@ -1,11 +1,14 @@
 {
     "name": "@coderan/component-styles",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "",
     "scripts": {
         "build": "gulp build",
         "watch": "gulp watch"
     },
+    "files": [
+        "dist"
+    ],
     "keywords": [],
     "author": "",
     "license": "ISC",
@@ -24,5 +27,9 @@
         "lerna": "9.0.3",
         "vite": "7.3.0",
         "vite-plugin-dts": "4.5.4"
-    }
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "ad8739d6d414df48dca9ef16f084711ddc07dd00"
 }
