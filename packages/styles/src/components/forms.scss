@@ -5,14 +5,17 @@
     --cui-form-input-label-text-color: var(--cui-color-gray-700);
     --cui-form-input-label-text-color-focus: var(--cui-primary-color);
     --cui-form-input-background-color: var(--cui-background-color, #fff);
+
+    --cui-form-hint-text-color: var(--cui-color-gray-500);
+    --cui-form-error-text-color: var(--cui-danger-color);
 }
 
-.cui-form-group {
+.cui-form__group {
     display: flex;
     flex-direction: column;
 }
 
-.cui-form-field {
+.cui-form__field {
     display: flex;
     border: solid 1px var(--cui-form-input-border-color);
     border-radius: var(--cui-default-border-radius);
@@ -24,29 +27,41 @@
         border-color: var(--cui-form-input-border-color-focus);
         border-width: 1px;
 
-        .cui-form-label {
+        .cui-form__label {
             color: var(--cui-form-input-label-text-color-focus);
         }
     }
 
     &:focus-within, &.cui-form-field--has-value {
-        .cui-form-label {
+        .cui-form__label {
             top: 0.4rem;
             margin-left: -0.25rem;
             transform: scale(0.8) translateY(0);
         }
 
-        .cui-form-input {
+        .cui-form__input {
             padding: 1.4rem 0 0.4rem 0;
+        }
+    }
+
+    &--error {
+        border-color: var(--cui-danger-color);
+
+        .cui-form__label {
+            color: var(--cui-danger-color);
+        }
+
+        .cui-form__error {
+            display: block;
         }
     }
 }
 
-.cui-form-input-wrapper {
+.cui-form-input__wrapper {
     position: relative;
 }
 
-.cui-form-input {
+.cui-form__input {
     font-family: var(--cui-font-family), sans-serif;
     padding: 0.9rem 0 0.9rem 0;
     font-size: 0.9rem;
@@ -64,7 +79,7 @@
     }
 }
 
-.cui-form-label {
+.cui-form__label {
     font-family: var(--cui-font-family), sans-serif;
     font-size: 0.9rem;
     position: absolute;
@@ -74,14 +89,26 @@
     color: var(--cui-form-input-label-text-color);
 }
 
-.cui-form_icon-start {
+.cui-form__icon--start {
     margin-right: 0.9rem;
     display: flex;
     align-items: center;
 }
 
-.cui-form_icon-end {
+.cui-form_icon--end {
     margin-left: 0.9rem;
     display: flex;
     align-items: center;
+}
+
+.cui-form__hint {
+    font-size: 0.8rem;
+    color: var(--cui-form-hint-text-color);
+    margin-top: 0.2rem;
+}
+
+.cui-form__error {
+    font-size: 0.8rem;
+    color: var(--cui-form-error-text-color);
+    margin-top: 0.2rem;
 }

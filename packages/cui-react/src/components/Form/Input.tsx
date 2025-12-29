@@ -1,9 +1,11 @@
 import { FC, InputHTMLAttributes, useId, useState } from 'react';
-import { Group } from './Group';
+import { Field } from './Field';
 import '@coderan/cui-styles/src/components/forms.scss';
-import { GenericFormFieldProps } from './GenericFormFieldProps';
+import { FieldProps } from './FieldProps';
+import { Group } from './Group';
+import { GroupProps } from './GroupProps';
 
-export interface InputProps extends InputHTMLAttributes<HTMLInputElement>, GenericFormFieldProps {
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement>, FieldProps, GroupProps {
     formFieldClassname?: string;
 }
 
@@ -14,6 +16,8 @@ export const Input: FC<InputProps> = ({
     iconStart,
     iconEnd,
     id,
+    errors,
+    hint,
 }) => {
     const fallbackId = useId();
     const inputId = id || fallbackId;
@@ -22,23 +26,29 @@ export const Input: FC<InputProps> = ({
 
     return (
         <Group
-            className={formFieldClassname}
-            label={label}
-            inputId={inputId}
-            hasValue={!! value}
-            iconStart={iconStart}
-            iconEnd={iconEnd}
+            errors={errors}
+            hint={hint}
         >
-            <input
-                type="text"
-                className="cui-form-input"
-                placeholder={placeholder}
-                id={inputId}
-                onChange={(e) => setValue(e.target.value)}
-                value={value}
-            />
-            {/*    errors */}
-            {/*    hint */}
+            <Field
+                className={formFieldClassname}
+                label={label}
+                inputId={inputId}
+                hasValue={!! value}
+                iconStart={iconStart}
+                iconEnd={iconEnd}
+                hasError={!!errors}
+            >
+                <input
+                    type="text"
+                    className="cui-form__input"
+                    placeholder={placeholder}
+                    id={inputId}
+                    onChange={(e) => setValue(e.target.value)}
+                    value={value}
+                />
+                {/*    errors */}
+                {/*    hint */}
+            </Field>
         </Group>
     )
 }
