@@ -1,187 +1,189 @@
 :root {
-    --badge-primary-text-color: var(--cui-primary-color);
-    --badge-primary-background-color: hsl(from var(--badge-primary-text-color) h s l / 0.10);
+    --cui-badge-border-radius: var(--cui-small-border-radius);
 
-    --badge-danger-text-color: var(--cui-danger-color);
-    --badge-danger-background-color: hsl(from var(--badge-danger-text-color) h s l / 0.10);
+    --cui-badge-primary-text-color: var(--cui-primary-color);
+    --cui-badge-primary-background-color: hsl(from var(--cui-badge-primary-text-color) h s l / 0.10);
 
-    --badge-success-text-color: var(--cui-success-color);
-    --badge-success-background-color: hsl(from var(--badge-success-text-color) h s l / 0.10);
+    --cui-badge-danger-text-color: var(--cui-danger-color);
+    --cui-badge-danger-background-color: hsl(from var(--cui-badge-danger-text-color) h s l / 0.10);
 
-    --badge-red-text-color: var(--cui-color-red-700);
-    --badge-red-background-color: hsl(from var(--badge-red-text-color) h s l / 0.10);
+    --cui-badge-success-text-color: var(--cui-success-color);
+    --cui-badge-success-background-color: hsl(from var(--cui-badge-success-text-color) h s l / 0.10);
 
-    --badge-pink-text-color: var(--cui-color-pink-700);
-    --badge-pink-background-color: hsl(from var(--badge-pink-text-color) h s l / 0.10);
+    --cui-badge-red-text-color: var(--cui-color-red-700);
+    --cui-badge-red-background-color: hsl(from var(--cui-badge-red-text-color) h s l / 0.10);
 
-    --badge-purple-text-color: var(--cui-color-purple-700);
-    --badge-purple-background-color: hsl(from var(--badge-purple-text-color) h s l / 0.10);
+    --cui-badge-pink-text-color: var(--cui-color-pink-700);
+    --cui-badge-pink-background-color: hsl(from var(--cui-badge-pink-text-color) h s l / 0.10);
 
-    --badge-indigo-text-color: var(--cui-color-indigo-700);
-    --badge-indigo-background-color: hsl(from var(--badge-indigo-text-color) h s l / 0.10);
+    --cui-badge-purple-text-color: var(--cui-color-purple-700);
+    --cui-badge-purple-background-color: hsl(from var(--cui-badge-purple-text-color) h s l / 0.10);
 
-    --badge-blue-text-color: var(--cui-color-blue-700);
-    --badge-blue-background-color: hsl(from var(--badge-blue-text-color) h s l / 0.10);
+    --cui-badge-indigo-text-color: var(--cui-color-indigo-700);
+    --cui-badge-indigo-background-color: hsl(from var(--cui-badge-indigo-text-color) h s l / 0.10);
 
-    --badge-teal-text-color: var(--cui-color-teal-900);
-    --badge-teal-background-color: hsl(from var(--badge-teal-text-color) h s l / 0.10);
+    --cui-badge-blue-text-color: var(--cui-color-blue-700);
+    --cui-badge-blue-background-color: hsl(from var(--cui-badge-blue-text-color) h s l / 0.10);
 
-    --badge-green-text-color: var(--cui-color-green-800);
-    --badge-green-background-color: hsl(from var(--badge-green-text-color) h s l / 0.10);
+    --cui-badge-teal-text-color: var(--cui-color-teal-900);
+    --cui-badge-teal-background-color: hsl(from var(--cui-badge-teal-text-color) h s l / 0.10);
 
-    --badge-lime-text-color: var(--cui-color-lime-900);
-    --badge-lime-background-color: hsl(from var(--badge-lime-text-color) h s l / 0.10);
+    --cui-badge-green-text-color: var(--cui-color-green-800);
+    --cui-badge-green-background-color: hsl(from var(--cui-badge-green-text-color) h s l / 0.10);
 
-    --badge-yellow-text-color: var(--cui-color-yellow-700);
-    --badge-yellow-background-color: hsl(from var(--badge-yellow-text-color) h s l / 0.10);
+    --cui-badge-lime-text-color: var(--cui-color-lime-900);
+    --cui-badge-lime-background-color: hsl(from var(--cui-badge-lime-text-color) h s l / 0.10);
 
-    --badge-orange-text-color: var(--cui-color-orange-900);
-    --badge-orange-background-color: hsl(from var(--badge-orange-text-color) h s l / 0.10);
+    --cui-badge-yellow-text-color: var(--cui-color-yellow-700);
+    --cui-badge-yellow-background-color: hsl(from var(--cui-badge-yellow-text-color) h s l / 0.10);
 
-    --badge-brown-text-color: var(--cui-color-brown-700);
-    --badge-brown-background-color: hsl(from var(--badge-brown-text-color) h s l / 0.10);
+    --cui-badge-orange-text-color: var(--cui-color-orange-900);
+    --cui-badge-orange-background-color: hsl(from var(--cui-badge-orange-text-color) h s l / 0.10);
 
-    --badge-gray-text-color: var(--cui-color-gray-700);
-    --badge-gray-background-color: hsl(from var(--badge-gray-text-color) h s l / 0.10);
+    --cui-badge-brown-text-color: var(--cui-color-brown-700);
+    --cui-badge-brown-background-color: hsl(from var(--cui-badge-brown-text-color) h s l / 0.10);
 
-    --badge-blue-gray-text-color: var(--cui-color-blue-gray-700);
-    --badge-blue-gray-background-color: hsl(from var(--badge-blue-gray-text-color) h s l / 0.10);
+    --cui-badge-gray-text-color: var(--cui-color-gray-700);
+    --cui-badge-gray-background-color: hsl(from var(--cui-badge-gray-text-color) h s l / 0.10);
+
+    --cui-badge-blue-gray-text-color: var(--cui-color-blue-gray-700);
+    --cui-badge-blue-gray-background-color: hsl(from var(--cui-badge-blue-gray-text-color) h s l / 0.10);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --badge-primary-text-color: var(--cui-primary-color);
-        --badge-primary-background-color: hsl(from var(--cui-primary-color) h s l / 0.10);
+        --cui-badge-primary-text-color: var(--cui-primary-color);
+        --cui-badge-primary-background-color: hsl(from var(--cui-primary-color) h s l / 0.10);
 
-        --badge-danger-text-color: var(--cui-danger-color);
-        --badge-danger-background-color: hsl(from var(--cui-danger-color) h s l / 0.10);
+        --cui-badge-danger-text-color: var(--cui-danger-color);
+        --cui-badge-danger-background-color: hsl(from var(--cui-danger-color) h s l / 0.10);
 
-        --badge-success-text-color: var(--cui-success-color);
-        --badge-success-background-color: hsl(from var(--cui-success-color) h s l / 0.10);
+        --cui-badge-success-text-color: var(--cui-success-color);
+        --cui-badge-success-background-color: hsl(from var(--cui-success-color) h s l / 0.10);
 
-        --badge-red-text-color: var(--cui-color-red-300);
-        --badge-red-background-color: hsl(from var(--badge-red-text-color) h s l / 0.10);
+        --cui-badge-red-text-color: var(--cui-color-red-300);
+        --cui-badge-red-background-color: hsl(from var(--cui-badge-red-text-color) h s l / 0.10);
 
-        --badge-pink-text-color: var(--cui-color-pink-300);
-        --badge-pink-background-color: hsl(from var(--badge-pink-text-color) h s l / 0.10);
+        --cui-badge-pink-text-color: var(--cui-color-pink-300);
+        --cui-badge-pink-background-color: hsl(from var(--cui-badge-pink-text-color) h s l / 0.10);
 
-        --badge-purple-text-color: var(--cui-color-purple-300);
-        --badge-purple-background-color: hsl(from var(--badge-purple-text-color) h s l / 0.10);
+        --cui-badge-purple-text-color: var(--cui-color-purple-300);
+        --cui-badge-purple-background-color: hsl(from var(--cui-badge-purple-text-color) h s l / 0.10);
 
-        --badge-indigo-text-color: var(--cui-color-indigo-300);
-        --badge-indigo-background-color: hsl(from var(--badge-indigo-text-color) h s l / 0.10);
+        --cui-badge-indigo-text-color: var(--cui-color-indigo-300);
+        --cui-badge-indigo-background-color: hsl(from var(--cui-badge-indigo-text-color) h s l / 0.10);
 
-        --badge-blue-text-color: var(--cui-color-blue-300);
-        --badge-blue-background-color: hsl(from var(--badge-blue-text-color) h s l / 0.10);
+        --cui-badge-blue-text-color: var(--cui-color-blue-300);
+        --cui-badge-blue-background-color: hsl(from var(--cui-badge-blue-text-color) h s l / 0.10);
 
-        --badge-teal-text-color: var(--cui-color-teal-300);
-        --badge-teal-background-color: hsl(from var(--badge-teal-text-color) h s l / 0.10);
+        --cui-badge-teal-text-color: var(--cui-color-teal-300);
+        --cui-badge-teal-background-color: hsl(from var(--cui-badge-teal-text-color) h s l / 0.10);
 
-        --badge-green-text-color: var(--cui-color-green-300);
-        --badge-green-background-color: hsl(from var(--badge-green-text-color) h s l / 0.10);
+        --cui-badge-green-text-color: var(--cui-color-green-300);
+        --cui-badge-green-background-color: hsl(from var(--cui-badge-green-text-color) h s l / 0.10);
 
-        --badge-lime-text-color: var(--cui-color-lime-300);
-        --badge-lime-background-color: hsl(from var(--badge-lime-text-color) h s l / 0.10);
+        --cui-badge-lime-text-color: var(--cui-color-lime-300);
+        --cui-badge-lime-background-color: hsl(from var(--cui-badge-lime-text-color) h s l / 0.10);
 
-        --badge-yellow-text-color: var(--cui-color-yellow-300);
-        --badge-yellow-background-color: hsl(from var(--badge-yellow-text-color) h s l / 0.10);
+        --cui-badge-yellow-text-color: var(--cui-color-yellow-300);
+        --cui-badge-yellow-background-color: hsl(from var(--cui-badge-yellow-text-color) h s l / 0.10);
 
-        --badge-orange-text-color: var(--cui-color-orange-300);
-        --badge-orange-background-color: hsl(from var(--badge-orange-text-color) h s l / 0.10);
+        --cui-badge-orange-text-color: var(--cui-color-orange-300);
+        --cui-badge-orange-background-color: hsl(from var(--cui-badge-orange-text-color) h s l / 0.10);
 
-        --badge-brown-text-color: var(--cui-color-brown-300);
-        --badge-brown-background-color: hsl(from var(--badge-brown-text-color) h s l / 0.10);
+        --cui-badge-brown-text-color: var(--cui-color-brown-300);
+        --cui-badge-brown-background-color: hsl(from var(--cui-badge-brown-text-color) h s l / 0.10);
 
-        --badge-gray-text-color: var(--cui-color-gray-300);
-        --badge-gray-background-color: hsl(from var(--badge-gray-text-color) h s l / 0.10);
+        --cui-badge-gray-text-color: var(--cui-color-gray-300);
+        --cui-badge-gray-background-color: hsl(from var(--cui-badge-gray-text-color) h s l / 0.10);
 
-        --badge-blue-gray-text-color: var(--cui-color-blue-gray-300);
-        --badge-blue-gray-background-color: hsl(from var(--badge-blue-gray-text-color) h s l / 0.10);
+        --cui-badge-blue-gray-text-color: var(--cui-color-blue-gray-300);
+        --cui-badge-blue-gray-background-color: hsl(from var(--cui-badge-blue-gray-text-color) h s l / 0.10);
     }
 }
 
 .cuiBadge {
     padding: 0.5rem;
     font-size: 0.75rem;
-    border-radius: var(--cui-small-border-radius);
+    border-radius: var(--cui-badge-border-radius);
 
     &.cuiBadge--primary {
-        color: var(--badge-primary-text-color);
-        background-color: var(--badge-primary-background-color);
+        color: var(--cui-badge-primary-text-color);
+        background-color: var(--cui-badge-primary-background-color);
     }
 
     &.cuiBadge--danger {
-        color: var(--badge-danger-text-color);
-        background-color: var(--badge-danger-background-color);
+        color: var(--cui-badge-danger-text-color);
+        background-color: var(--cui-badge-danger-background-color);
     }
 
     &.cuiBadge--success {
-        color: var(--badge-success-text-color);
-        background-color: var(--badge-success-background-color);
+        color: var(--cui-badge-success-text-color);
+        background-color: var(--cui-badge-success-background-color);
     }
 
     &.cuiBadge--red {
-        color: var(--badge-red-text-color);
-        background-color: var(--badge-red-background-color);
+        color: var(--cui-badge-red-text-color);
+        background-color: var(--cui-badge-red-background-color);
     }
 
     &.cuiBadge--pink {
-        color: var(--badge-pink-text-color);
-        background-color: var(--badge-pink-background-color);
+        color: var(--cui-badge-pink-text-color);
+        background-color: var(--cui-badge-pink-background-color);
     }
 
     &.cuiBadge--purple {
-        color: var(--badge-purple-text-color);
-        background-color: var(--badge-purple-background-color);
+        color: var(--cui-badge-purple-text-color);
+        background-color: var(--cui-badge-purple-background-color);
     }
 
     &.cuiBadge--indigo {
-        color: var(--badge-indigo-text-color);
-        background-color: var(--badge-indigo-background-color);
+        color: var(--cui-badge-indigo-text-color);
+        background-color: var(--cui-badge-indigo-background-color);
     }
 
     &.cuiBadge--blue {
-        color: var(--badge-blue-text-color);
-        background-color: var(--badge-blue-background-color);
+        color: var(--cui-badge-blue-text-color);
+        background-color: var(--cui-badge-blue-background-color);
     }
 
     &.cuiBadge--teal {
-        color: var(--badge-teal-text-color);
-        background-color: var(--badge-teal-background-color);
+        color: var(--cui-badge-teal-text-color);
+        background-color: var(--cui-badge-teal-background-color);
     }
 
     &.cuiBadge--green {
-        color: var(--badge-green-text-color);
-        background-color: var(--badge-green-background-color);
+        color: var(--cui-badge-green-text-color);
+        background-color: var(--cui-badge-green-background-color);
     }
 
     &.cuiBadge--lime {
-        color: var(--badge-lime-text-color);
-        background-color: var(--badge-lime-background-color);
+        color: var(--cui-badge-lime-text-color);
+        background-color: var(--cui-badge-lime-background-color);
     }
 
     &.cuiBadge--yellow {
-        color: var(--badge-yellow-text-color);
-        background-color: var(--badge-yellow-background-color);
+        color: var(--cui-badge-yellow-text-color);
+        background-color: var(--cui-badge-yellow-background-color);
     }
 
     &.cuiBadge--orange {
-        color: var(--badge-orange-text-color);
-        background-color: var(--badge-orange-background-color);
+        color: var(--cui-badge-orange-text-color);
+        background-color: var(--cui-badge-orange-background-color);
     }
 
     &.cuiBadge--brown {
-        color: var(--badge-brown-text-color);
-        background-color: var(--badge-brown-background-color);
+        color: var(--cui-badge-brown-text-color);
+        background-color: var(--cui-badge-brown-background-color);
     }
 
     &.cuiBadge--gray {
-        color: var(--badge-gray-text-color);
-        background-color: var(--badge-gray-background-color);
+        color: var(--cui-badge-gray-text-color);
+        background-color: var(--cui-badge-gray-background-color);
     }
 
     &.cuiBadge--blueGray {
-        color: var(--badge-blue-gray-text-color);
-        background-color: var(--badge-blue-gray-background-color);
+        color: var(--cui-badge-blue-gray-text-color);
+        background-color: var(--cui-badge-blue-gray-background-color);
     }
 }
