@@ -2,7 +2,7 @@ storybook:
   npm -w @coderan/component-playground run storybook
 
 watch-styles:
-  npm -w packages/styles run watch
+  npm -w @coderan/component-styles run watch
 
 install *args:
   npm install {{args}}
