@@ -15,15 +15,16 @@
     "devDependencies": {
         "autoprefixer": "^10.4.18",
         "cssnano": "^6.0.5",
+        "cssnano-preset-lite": "^4.0.4",
         "csstype": "^3.1.3",
         "gulp": "^5.0.1",
         "gulp-postcss": "^10.0.0",
         "gulp-sass": "^5.1.0",
         "postcss": "^8.4.35",
-        "sass": "^1.71.1",
-        "cssnano-preset-lite": "^4.0.4"
+        "sass": "^1.71.1"
     },
     "publishConfig": {
         "access": "public"
-    }
+    },
+    "gitHead": "73bb3647b3921a9f455fc5b165db408ed21a84d8"
 }
