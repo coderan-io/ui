@@ -12,15 +12,15 @@
     --cui-button-primary-hover-color: #{colors.get(variables.$primary-color, 600)};
     --cui-button-primary-active-color: #{colors.get(variables.$primary-color, 700)};
     --cui-button-primary-loading-color: #{color.adjust(colors.get(variables.$primary-color, 500), $alpha: -0.80)};
-    --cui-button-primary-loading-bar-color: var(--cui-button-primary-color);
     --cui-button-primary-loading-text-color: #fff;
+    --cui-button-primary-loading-bar-color: var(--cui-button-primary-color);
     //secondary
     --cui-button-secondary-color: transparent;
-    --cui-button-secondary-hover-color: #{colors.get(variables.$primary-color, 50)};
-    --cui-button-secondary-active-color: #{colors.get(variables.$primary-color, 75)};
+    --cui-button-secondary-hover-color: #{color.adjust(colors.get(variables.$primary-color, 500), $alpha: -0.80)};
+    --cui-button-secondary-active-color: #{color.adjust(colors.get(variables.$primary-color, 500), $alpha: -0.70)};
     --cui-button-secondary-text-color: var(--cui-button-primary-color);
     --cui-button-secondary-loading-color: transparent;
-    --cui-button-secondary-loading-text-color: var(--cui-button-secondary-hover-color);
+    --cui-button-secondary-loading-text-color: var(--cui-button-secondary-active-color);
     --cui-button-secondary-loading-bar-color: var(--cui-button-primary-color);
     //danger
     --cui-button-danger-color: #{colors.get('red', 700)};
@@ -236,19 +236,19 @@
         }
     }
 
-    .cui-button__icon--start {
-        margin-right: 0.5rem;
+    .cui-button__icon {
+        font-style: normal;
+
+        &.cui-button__icon--start {
+            margin-right: 0.5rem;
+        }
+
+        &.cui-button__icon--end {
+            margin-left: 0.5rem;
+        }
     }
 
     &.cui-button--loading .cui-button__icon--start, &.cui-button--loading .cui-button__icon--end {
         opacity: 0.5
-    }
-
-    .cui-button__icon--end {
-        margin-left: 0.5rem;
-
-        .cui-button--loading & {
-            opacity: 0.5
-        }
     }
 }
