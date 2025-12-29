@@ -11,9 +11,9 @@
     },
     "exports": {
         ".": {
-            "types": "./src/index.ts",
-            "require": "./build/index.js",
-            "import": "./src/index.ts"
+            "types": "./dist/index.d.ts",
+            "require": "./dist/index.js",
+            "import": "./dist/index.mjs"
         }
     },
     "keywords": [],
@@ -29,5 +29,6 @@
     },
     "files": [
         "dist"
-    ]
+    ],
+    "gitHead": "ad8739d6d414df48dca9ef16f084711ddc07dd00"
 }
