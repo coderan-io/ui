@@ -1,4 +1,4 @@
-import '../../component-styles/src/themes/coderan.scss';
+import '../../component-styles/src/themes/coderan/index.css';
 
 /** @type { import('@storybook/react-vite').Preview } */
 const preview = {

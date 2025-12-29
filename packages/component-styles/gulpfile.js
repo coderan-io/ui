@@ -4,14 +4,13 @@ const postcss = require('gulp-postcss');
 const sass = require('gulp-sass')(require('sass'));
 
 const build = () => {
-    return gulp.src('./src/**/*.scss')
-        .pipe(sass.sync().on('error', sass.logError))
+    return gulp.src('./src/**/*.css')
         .pipe(postcss())
         .pipe(gulp.dest('./dist'));
 }
 
 const watch = () => {
-    gulp.watch('./src/**/*.scss', build);
+    gulp.watch('./src/**/*.css', build);
 }
 
 module.exports = {

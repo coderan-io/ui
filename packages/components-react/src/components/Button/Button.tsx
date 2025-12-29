@@ -1,6 +1,6 @@
 import type { FC, PropsWithChildren, ReactNode } from 'react';
 import { clsx } from 'clsx';
-import '@coderan/component-styles/src/components/buttons.scss';
+import styles from './button.module.css'
 
 export type ButtonProps = {
     variant: 'primary';
@@ -21,15 +21,29 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
     return (
         <button
             className={clsx(
-                'cui-button',
-                `cui-button--${variant}`,
-                loading && 'cui-button--loading',
+                styles.cuiButton,
+                styles[`cuiButton--${variant}`],
+                loading && styles['cuiButton--loading'],
             )}
             {...props}
         >
-            {iconStart && <i className="cui-button__icon cui-button__icon--start">{iconStart}</i>}
-            <span className="cui-button__text">{children}</span>
-            {iconEnd && <i className="cui-button__icon cui-button__icon--end">{iconEnd}</i>}
+            {iconStart && (
+                <i
+                    className={clsx(
+                        styles.cuiButtonIcon,
+                        styles['cuiButtonIcon--start'],
+                    )}
+                >{iconStart}</i>
+            )}
+            <span className={styles.cuiButtonText}>{children}</span>
+            {iconEnd && (
+                <i
+                    className={clsx(
+                        styles.cuiButtonIcon,
+                        styles['cuiButtonIcon--end'],
+                    )}
+                >{iconEnd}</i>
+            )}
         </button>
     )
 }

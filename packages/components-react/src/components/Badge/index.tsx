@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes, PropsWithChildren } from 'react';
 import { Color } from '../../utilities/Color';
-import '@coderan/component-styles/src/components/badge.scss';
 import { clsx } from 'clsx';
+import styles from './badge.module.css';
 
 export interface BadgeProps extends HTMLAttributes<HTMLDivElement> {
     color?: Color;
@@ -13,8 +13,8 @@ export const Badge: FC<PropsWithChildren<BadgeProps>> = ({
     children,
 }) => (
     <div className={clsx(
-        'badge',
-        `badge--${color}`,
+        styles.cuiBadge,
+        styles[`cuiBadge--${color}`],
         className,
     )}>
         {children}

@@ -7,11 +7,11 @@ import {
     useState
 } from 'react';
 import { Field } from './Field';
-import '@coderan/component-styles/src/components/forms.scss';
+import styles from './form.module.css';
 import { FieldProps } from './FieldProps';
 import { Group } from './Group';
 import { GroupProps } from './GroupProps';
-import { ClassValue } from 'clsx';
+import { ClassValue, clsx } from 'clsx';
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, FieldProps, GroupProps {
     groupClassName?: ClassValue;
@@ -39,7 +39,7 @@ export const Select: FC<PropsWithChildren<SelectProps>> = ({
             className={groupClassName}
         >
             <Field
-                controlWrapperClassName="cui-form__select-wrapper"
+                controlWrapperClassName={styles.cuiSelectWrapper}
                 label={label}
                 inputId={selectId}
                 hasValue={!!value}
@@ -49,7 +49,10 @@ export const Select: FC<PropsWithChildren<SelectProps>> = ({
                 labelAlwaysLikeFocus={true}
             >
                 <select
-                    className="cui-form__control cui-form__select"
+                    className={clsx(
+                        styles.cuiFormControl,
+                        styles.cuiFormSelect,
+                    )}
                     id={selectId}
                     onChange={(e: ChangeEvent<HTMLSelectElement>) => setValue(e.target.value)}
                     value={value}

@@ -1,10 +1,10 @@
 import { FC, InputHTMLAttributes, useId, useState } from 'react';
 import { Field } from './Field';
-import '@coderan/component-styles/src/components/forms.scss';
+import styles from './form.module.css';
 import { FieldProps } from './FieldProps';
 import { Group } from './Group';
 import { GroupProps } from './GroupProps';
-import { ClassValue } from 'clsx';
+import { ClassValue, clsx } from 'clsx';
 
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>, FieldProps, GroupProps {
     groupClassName?: ClassValue;
@@ -45,7 +45,10 @@ export const Input: FC<InputProps> = ({
             >
                 <input
                     type="text"
-                    className="cui-form__control cui-form__input"
+                    className={clsx(
+                        styles.cuiFormControl,
+                        styles.cuiFormInput,
+                    )}
                     placeholder={placeholder}
                     aria-placeholder={placeholder}
                     aria-label={label}
