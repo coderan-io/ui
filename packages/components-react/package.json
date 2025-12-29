@@ -1,6 +1,6 @@
 {
     "name": "@coderan/components-react",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
@@ -11,16 +11,16 @@
     },
     "exports": {
         ".": {
-            "types": "./src/index.ts",
-            "require": "./build/index.js",
-            "import": "./src/index.ts"
+            "types": "./dist/index.d.ts",
+            "require": "./dist/index.js",
+            "import": "./dist/index.mjs"
         }
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@coderan/component-styles": "^0.1.0",
+        "@coderan/component-styles": "^0.1.1",
         "clsx": "^2.1.0",
         "react": "^19.1.0"
     },
@@ -29,5 +29,9 @@
     },
     "files": [
         "dist"
-    ]
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "gitHead": "ad8739d6d414df48dca9ef16f084711ddc07dd00"
 }
