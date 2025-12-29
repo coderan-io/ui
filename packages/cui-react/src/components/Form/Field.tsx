@@ -1,20 +1,21 @@
-import { FC, HTMLAttributes, PropsWithChildren, useId } from 'react';
-import { clsx } from 'clsx';
+import { FC, PropsWithChildren } from 'react';
+import { ClassValue, clsx } from 'clsx';
 import '@coderan/cui-styles/src/components/forms.scss';
 import { FieldProps } from './FieldProps';
 
 
 
-export interface FormContainerProps extends HTMLAttributes<HTMLDivElement>, FieldProps {
+export interface FormContainerProps extends FieldProps {
     inputId: string;
     hasValue?: boolean;
+    className?: ClassValue;
 }
 
 export const Field: FC<PropsWithChildren<FormContainerProps>> = ({
     children,
     label,
     floatingLabel = true,
-    className, // TODO propagate class name to proper element
+    className,
     inputId,
     hasValue,
     iconStart,
