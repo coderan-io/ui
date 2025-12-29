@@ -1,6 +1,6 @@
 {
     "name": "coderan",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "private": true,
     "description": "",
     "main": "index.js",
@@ -15,7 +15,6 @@
         "@typescript-eslint/eslint-plugin": "^6.15.0",
         "@typescript-eslint/parser": "^6.15.0",
         "@vitejs/plugin-react": "^4.2.1",
-        "cssnano-preset-lite": "^4.0.4",
         "eslint": "^8.56.0",
         "eslint-plugin-react": "^7.33.2",
         "lerna": "^9.0.3",

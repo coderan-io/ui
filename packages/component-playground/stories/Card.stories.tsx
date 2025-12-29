@@ -1,6 +1,4 @@
 import { Badge, Button, ButtonColor, Card, Color } from '@coderan/components-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
@@ -40,7 +38,7 @@ export const With_Header_Actions = {
             <Card.Header
                 actions={(
                     <Button color="secondary">
-                        <FontAwesomeIcon icon={faTimes} />
+                        x
                     </Button>
                 )}
             >
