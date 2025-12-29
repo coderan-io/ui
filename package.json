@@ -5,7 +5,6 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "prepublish": "npm run build",
         "build": "lerna run build"
     },
     "keywords": [],
