@@ -1,6 +1,5 @@
 import type { FC, PropsWithChildren, ReactNode } from 'react';
 import { clsx } from 'clsx';
-import { LoadingIcon } from '../LoadingIcon';
 import '@coderan/cui-styles/src/components/buttons.scss';
 
 export type ButtonProps = {
