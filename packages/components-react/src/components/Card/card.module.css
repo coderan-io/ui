@@ -5,7 +5,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --cui-card-background-color: #1A1A1A;
+        --cui-card-background-color: var(--cui-color-gray-900);
     }
 }
 

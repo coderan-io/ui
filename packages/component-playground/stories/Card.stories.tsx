@@ -39,7 +39,7 @@ export const With_Header_Actions = {
         <Card {...args}>
             <Card.Header
                 actions={(
-                    <Button color="transparentDark">
+                    <Button color="secondary">
                         <FontAwesomeIcon icon={faTimes} />
                     </Button>
                 )}
