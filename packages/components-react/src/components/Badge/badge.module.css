@@ -88,138 +88,138 @@
     --badge-blue-gray-background-color: var(--cui-color-blue-gray-50);
 }
 
-.badge {
+.cuiBadge {
     padding: 0.25rem;
     font-size: 0.75rem;
     border-radius: var(--cui-default-border-radius);
 
-    &--primary {
+    &.cuiBadge--primary {
         border: 1px solid var(--badge-primary-border-color);
         color: var(--badge-primary-text-color);
         background-color: var(--badge-primary-background-color);
     }
 
-    &--danger {
+    &.cuiBadge--danger {
         border: 1px solid var(--badge-danger-border-color);
         color: var(--badge-danger-text-color);
         background-color: var(--badge-danger-background-color);
     }
 
-    &--success {
+    &.cuiBadge--success {
         border: 1px solid var(--badge-success-border-color);
         color: var(--badge-success-text-color);
         background-color: var(--badge-success-background-color);
     }
 
-    &--red {
+    &.cuiBadge--red {
         border: 1px solid var(--badge-red-border-color);
         color: var(--badge-red-text-color);
         background-color: var(--badge-red-background-color);
     }
 
-    &--pink {
+    &.cuiBadge--pink {
         border: 1px solid var(--badge-pink-border-color);
         color: var(--badge-pink-text-color);
         background-color: var(--badge-pink-background-color);
     }
 
-    &--purple {
+    &.cuiBadge--purple {
         border: 1px solid var(--badge-purple-border-color);
         color: var(--badge-purple-text-color);
         background-color: var(--badge-purple-background-color);
     }
 
-    &--deepPurple {
+    &.cuiBadge--deepPurple {
         border: 1px solid var(--badge-deep-purple-border-color);
         color: var(--badge-deep-purple-text-color);
         background-color: var(--badge-deep-purple-background-color);
     }
 
-    &--indigo {
+    &.cuiBadge--indigo {
         border: 1px solid var(--badge-indigo-border-color);
         color: var(--badge-indigo-text-color);
         background-color: var(--badge-indigo-background-color);
     }
 
-    &--blue {
+    &.cuiBadge--blue {
         border: 1px solid var(--badge-blue-border-color);
         color: var(--badge-blue-text-color);
         background-color: var(--badge-blue-background-color);
     }
 
-    &--lightBlue {
+    &.cuiBadge--lightBlue {
         border: 1px solid var(--badge-light-blue-border-color);
         color: var(--badge-light-blue-text-color);
         background-color: var(--badge-light-blue-background-color);
     }
 
-    &--cyan {
+    &.cuiBadge--cyan {
         border: 1px solid var(--badge-cyan-border-color);
         color: var(--badge-cyan-text-color);
         background-color: var(--badge-cyan-background-color);
     }
 
-    &--teal {
+    &.cuiBadge--teal {
         border: 1px solid var(--badge-teal-border-color);
         color: var(--badge-teal-text-color);
         background-color: var(--badge-teal-background-color);
     }
 
-    &--green {
+    &.cuiBadge--green {
         border: 1px solid var(--badge-green-border-color);
         color: var(--badge-green-text-color);
         background-color: var(--badge-green-background-color);
     }
 
-    &--lightGreen {
+    &.cuiBadge--lightGreen {
         border: 1px solid var(--badge-light-green-border-color);
         color: var(--badge-light-green-text-color);
         background-color: var(--badge-light-green-background-color);
     }
 
-    &--lime {
+    &.cuiBadge--lime {
         border: 1px solid var(--badge-lime-border-color);
         color: var(--badge-lime-text-color);
         background-color: var(--badge-lime-background-color);
     }
 
-    &--yellow {
+    &.cuiBadge--yellow {
         border: 1px solid var(--badge-yellow-border-color);
         color: var(--badge-yellow-text-color);
         background-color: var(--badge-yellow-background-color);
     }
 
-    &--amber {
+    &.cuiBadge--amber {
         border: 1px solid var(--badge-amber-border-color);
         color: var(--badge-amber-text-color);
         background-color: var(--badge-amber-background-color);
     }
 
-    &--orange {
+    &.cuiBadge--orange {
         border: 1px solid var(--badge-orange-border-color);
         color: var(--badge-orange-text-color);
         background-color: var(--badge-orange-background-color);
     }
 
-    &--deepOrange {
+    &.cuiBadge--deepOrange {
         border: 1px solid var(--badge-deep-orange-border-color);
         color: var(--badge-deep-orange-text-color);
         background-color: var(--badge-deep-orange-background-color);
     }
 
-    &--brown {
+    &.cuiBadge--brown {
         border: 1px solid var(--badge-brown-border-color);
         color: var(--badge-brown-text-color);
         background-color: var(--badge-brown-background-color);
     }
 
-    &--gray {
+    &.cuiBadge--gray {
         border: 1px solid var(--badge-gray-border-color);
         color: var(--badge-gray-text-color);
         background-color: var(--badge-gray-background-color);
     }
 
-    &--blueGray {
+    &.cuiBadge--blueGray {
         border: 1px solid var(--badge-blue-gray-border-color);
         color: var(--badge-blue-gray-text-color);
         background-color: var(--badge-blue-gray-background-color);

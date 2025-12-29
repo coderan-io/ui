@@ -7,7 +7,7 @@ import {
     useState
 } from 'react';
 import { Field } from './Field';
-import '@coderan/component-styles/src/components/forms.scss';
+import styles from './form.module.css';
 import { FieldProps } from './FieldProps';
 import { Group } from './Group';
 import { GroupProps } from './GroupProps';
@@ -39,7 +39,7 @@ export const TextArea: FC<PropsWithChildren<TextAreaProps>> = ({
             className={groupClassName}
         >
             <Field
-                controlWrapperClassName="cui-form__textarea-wrapper"
+                controlWrapperClassName={styles.cuiTextareaWrapper}
                 label={label}
                 inputId={selectId}
                 hasValue={!!value}
@@ -48,7 +48,7 @@ export const TextArea: FC<PropsWithChildren<TextAreaProps>> = ({
                 hasError={!!errors}
             >
                 <textarea
-                    className="cui-form__control"
+                    className={styles.cuiFormControl}
                     id={selectId}
                     onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setValue(e.target.value)}
                     value={value}

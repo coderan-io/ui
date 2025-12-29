@@ -1,4 +1,5 @@
-@use "../utilities/colors";
+@import "./colors.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
     --cui-default-border-radius: 5px;
@@ -6,12 +7,10 @@
 
     --cui-background-color: #fff;
 
-    // Buttons
     --cui-primary-color: var(--cui-color-purple-600);
     --cui-danger-color: var(--cui-color-red-600);
     --cui-success-color: var(--cui-color-green-600);
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 html {
     font-family: var(--cui-font-family), sans-serif;
