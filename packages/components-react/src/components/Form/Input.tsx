@@ -22,6 +22,7 @@ export const Input: FC<InputProps> = ({
     id,
     errors,
     hint,
+    hasError,
 }) => {
     const fallbackId = useId();
     const inputId = id || fallbackId;
@@ -41,7 +42,7 @@ export const Input: FC<InputProps> = ({
                 hasValue={!! value}
                 iconStart={iconStart}
                 iconEnd={iconEnd}
-                hasError={!!errors}
+                hasError={hasError || (errors?.length && hasError !== false)}
             >
                 <input
                     type="text"
