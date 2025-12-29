@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "outDir": "dist",
+        "module": "esnext",
+        "target": "ES2022",
+        "jsx": "react-jsx",
+        "jsxImportSource": "@emotion/react",
+        "moduleResolution": "Bundler",
+        "esModuleInterop": true,
+        "lib": [
+            "ES2022",
+            "DOM",
+        ],
+
+    },
+    "exclude": [
+        "packages/cui-react/vite.config.ts"
+    ]
+}

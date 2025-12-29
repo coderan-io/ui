@@ -1,0 +1,254 @@
+@use "../utilities/animations" as animations;
+@use "../utilities/colors" as colors;
+@use "../utilities/variables" as variables;
+@use "sass:color";
+
+:root {
+    --cui-default-border-radius: #{variables.$default-border-radius};
+    --cui-button-font-weight: 500;
+    // primary
+    --cui-button-primary-color: #{colors.get(variables.$primary-color, 500)};
+    --cui-button-primary-text-color: #fff;
+    --cui-button-primary-hover-color: #{colors.get(variables.$primary-color, 600)};
+    --cui-button-primary-active-color: #{colors.get(variables.$primary-color, 700)};
+    --cui-button-primary-loading-color: #{color.adjust(colors.get(variables.$primary-color, 500), $alpha: -0.80)};
+    --cui-button-primary-loading-bar-color: var(--cui-button-primary-color);
+    --cui-button-primary-loading-text-color: #fff;
+    //secondary
+    --cui-button-secondary-color: transparent;
+    --cui-button-secondary-hover-color: #{colors.get(variables.$primary-color, 50)};
+    --cui-button-secondary-active-color: #{colors.get(variables.$primary-color, 75)};
+    --cui-button-secondary-text-color: var(--cui-button-primary-color);
+    --cui-button-secondary-loading-color: transparent;
+    --cui-button-secondary-loading-text-color: var(--cui-button-secondary-hover-color);
+    --cui-button-secondary-loading-bar-color: var(--cui-button-primary-color);
+    //danger
+    --cui-button-danger-color: #{colors.get('red', 700)};
+    --cui-button-danger-text-color: #fff;
+    --cui-button-danger-hover-color: #{colors.get('red', 800)};
+    --cui-button-danger-active-color: #{colors.get('red', 900)};
+    --cui-button-danger-loading-color: #{color.adjust(colors.get('red', 700), $alpha: -0.80)};
+    --cui-button-danger-loading-text-color: #fff;
+    --cui-button-danger-loading-bar-color: var(--cui-button-danger-color);
+    //warning
+    --cui-button-warning-color: #{colors.get('amber', 600)};
+    --cui-button-warning-text-color: #{colors.get('gray', 800)};
+    --cui-button-warning-hover-color: #{colors.get('amber', 700)};
+    --cui-button-warning-active-color: #{colors.get('amber', 800)};
+    --cui-button-warning-loading-color: #{color.adjust(colors.get('amber', 600), $alpha: -0.80)};
+    --cui-button-warning-loading-text-color: #fff;
+    --cui-button-warning-loading-bar-color: var(--cui-button-warning-color);
+    // dark
+    --cui-button-transparent-dark-color: transparent;
+    --cui-button-transparent-dark-text-color: #{variables.$dark-text-color};
+    --cui-button-transparent-dark-hover-color: rgba(0, 0, 0, 0.1);
+    --cui-button-transparent-dark-active-color: rgba(0, 0, 0, 0.2);
+    --cui-button-transparent-dark-loading-color: var(--cui-button-transparent-dark-hover-color);
+    --cui-button-transparent-dark-loading-text-color: var(--cui-button-transparent-dark-active-color);
+    --cui-button-transparent-dark-loading-bar-color: var(--cui-button-transparent-dark-text-color);
+    // light
+    --cui-button-transparent-light-color: transparent;
+    --cui-button-transparent-light-text-color: #{variables.$light-text-color};
+    --cui-button-transparent-light-hover-color: rgba(255, 255, 255, 0.1);
+    --cui-button-transparent-light-active-color: rgba(255, 255, 255, 0.2);
+    --cui-button-transparent-light-loading-color: var(--cui-button-transparent-light-hover-color);
+    --cui-button-transparent-light-loading-text-color: var(--cui-button-transparent-light-active-color);
+    --cui-button-transparent-light-loading-bar-color: var(--cui-button-transparent-light-text-color);
+
+}
+
+.cui-button {
+    padding: 0.9rem;
+    border-radius: var(--cui-default-border-radius);
+    font-weight: var(--cui-button-font-weight);
+    cursor: pointer;
+    position: relative;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+
+    &.cui-button--loading {
+        cursor: wait;
+
+        &:after {
+            animation: loading 1s infinite;
+            border-radius: var(--cui-default-border-radius);
+            content: '';
+            height: 4px;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+    }
+
+    &.cui-button--primary {
+        background-color: var(--cui-button-primary-color);
+        color: var(--cui-button-primary-text-color);
+
+        &:hover {
+            background: var(--cui-button-primary-hover-color);
+        }
+
+        &:active {
+            background: var(--cui-button-primary-active-color);
+        }
+
+        &.cui-button--loading {
+            background: var(--cui-button-primary-loading-color);
+            color: var(--cui-button-primary-loading-text-color);
+
+            &:after {
+                background: var(--cui-button-primary-loading-bar-color);
+            }
+        }
+    }
+
+    &.cui-button--secondary {
+        background: var(--cui-button-secondary-color);
+        color: var(--cui-button-secondary-text-color);
+
+        &:hover {
+            background: var(--cui-button-secondary-hover-color);
+        }
+
+        &:active {
+            background: var(--cui-button-secondary-active-color);
+        }
+
+        &.cui-button--loading {
+            background: var(--cui-button-secondary-loading-color);
+            color: var(--cui-button-secondary-loading-text-color);
+
+            &:after {
+                background: var(--cui-button-secondary-loading-bar-color);
+            }
+        }
+    }
+
+    &.cui-button--success {
+        background: var(--cui-button-success-color);
+        color: var(--cui-button-success-text-color);
+
+        &:hover {
+            background: var(--cui-button-success-color-hover);
+        }
+
+        &:active {
+            background: var(--cui-button-success-color-active);
+        }
+
+        &.cui-button--loading {
+            background: var(--cui-button-success-color-loading);
+            color: var(--cui-button-success-text-color-loading);
+
+            &:after {
+                background: var(--cui-button-success-color);
+            }
+        }
+    }
+
+    &.cui-button--danger {
+        background: var(--cui-button-danger-color);
+        color: var(--cui-button-danger-text-color);
+
+        &:hover {
+            background: var(--cui-button-danger-hover-color);
+        }
+
+        &:active {
+            background: var(--cui-button-danger-active-color);
+        }
+
+        &.cui-button--loading {
+            background: var(--cui-button-danger-loading-color);
+            color: var(--cui-button-danger-loading-text-color);
+
+            &:after {
+                background: var(--cui-button-danger-color);
+            }
+        }
+    }
+
+    &.cui-button--warning {
+        background: var(--cui-button-warning-color);
+        color: var(--cui-button-warning-text-color);
+
+        &:hover {
+            background: var(--cui-button-warning-hover-color);
+        }
+
+        &:active {
+            background: var(--cui-button-warning-active-color);
+        }
+
+        &.cui-button--loading {
+            background: var(--cui-button-warning-loading-color);
+            color: var(--cui-button-warning-loading-text-color);
+
+            &:after {
+                background: var(--cui-button-warning-color);
+            }
+        }
+    }
+
+    &.cui-button--transparent-dark {
+        background: var(--cui-button-transparent-dark-color);
+        color: var(--cui-button-transparent-dark-text-color);
+
+        &:hover {
+            background: var(--cui-button-transparent-dark-hover-color);
+        }
+
+        &:active {
+            background: var(--cui-button-transparent-dark-active-color);
+        }
+
+        &.cui-button--loading {
+            color: var(--cui-button-transparent-dark-loading-text-color);
+            background: var(--cui-button-transparent-dark-loading-color);
+
+            &:after {
+                background: var(--cui-button-transparent-dark-loading-bar-color);
+            }
+        }
+    }
+
+    &.cui-button--transparent-light {
+        background: var(--cui-button-transparent-light-color);
+        color: var(--cui-button-transparent-light-text-color);
+
+        &:hover {
+            background: var(--cui-button-transparent-light-hover-color);
+        }
+
+        &:active {
+            background: var(--cui-button-transparent-light-active-color);
+        }
+
+        &.cui-button--loading {
+            color: var(--cui-button-transparent-light-loading-text-color);
+            background: var(--cui-button-transparent-light-loading-color);
+
+            &:after {
+                background: var(--cui-button-transparent-light-loading-bar-color);
+            }
+        }
+    }
+
+    .cui-button__icon--start {
+        margin-right: 0.5rem;
+    }
+
+    &.cui-button--loading .cui-button__icon--start, &.cui-button--loading .cui-button__icon--end {
+        opacity: 0.5
+    }
+
+    .cui-button__icon--end {
+        margin-left: 0.5rem;
+
+        .cui-button--loading & {
+            opacity: 0.5
+        }
+    }
+}
