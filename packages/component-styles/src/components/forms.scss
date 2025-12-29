@@ -32,19 +32,19 @@
         }
     }
 
-    &:focus-within, &.cui-form-field--has-value {
+    &:focus-within, &.cui-form__field--has-value {
         .cui-form__label {
             top: 0.4rem;
             margin-left: -0.25rem;
             transform: scale(0.8) translateY(0);
         }
 
-        .cui-form__input {
+        .cui-form__control {
             padding: 1.4rem 0 0.4rem 0;
         }
     }
 
-    &--error {
+    &--has-error {
         border-color: var(--cui-danger-color);
 
         .cui-form__label {
@@ -57,11 +57,11 @@
     }
 }
 
-.cui-form-input__wrapper {
+.cui-form-control__wrapper {
     position: relative;
 }
 
-.cui-form__input {
+.cui-form__control {
     font-family: var(--cui-font-family), sans-serif;
     padding: 0.9rem 0 0.9rem 0;
     font-size: 0.9rem;
@@ -69,13 +69,17 @@
     border: none;
     border-radius: var(--cui-default-border-radius);
     outline: none;
-
-    &:not(:focus)::placeholder {
-        color: transparent;
-    }
+    min-width: 180px;
+    background: var(--cui-form-input-background-color);
 
     &:focus {
         padding: calc(0.9rem - 1px);
+    }
+}
+
+.cui-form__input {
+    &:not(:focus)::placeholder {
+        color: transparent;
     }
 }
 
@@ -87,6 +91,7 @@
     transform: translateY(-50%);
     transition: all 0.1s;
     color: var(--cui-form-input-label-text-color);
+    pointer-events: none;
 }
 
 .cui-form__icon--start {

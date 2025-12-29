@@ -1,6 +1,6 @@
-import '../../styles/src/themes/coderan.scss';
+import '../../component-styles/src/themes/coderan.scss';
 
-/** @type { import('@storybook/react').Preview } */
+/** @type { import('@storybook/react-vite').Preview } */
 const preview = {
     parameters: {
         actions: { argTypesRegex: '^on[A-Z].*' },
