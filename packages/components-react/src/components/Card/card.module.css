@@ -1,0 +1,32 @@
+:root {
+    --cui-card-background-color: #fff;
+    --cui-card-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cui-card-background-color: #1A1A1A;
+    }
+}
+
+.cuiCard {
+    display: block;
+    background-color: var(--cui-card-background-color);
+    border-radius: var(--cui-default-border-radius);
+    box-shadow: var(--cui-card-box-shadow);
+}
+
+.cuiCardHeader {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.cuiCardContent {
+    padding: 1rem;
+}
+
+.cuiCardHeaderActions {
+    margin-left: auto;
+    padding-left: 0.5rem;
+}
