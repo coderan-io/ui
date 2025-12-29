@@ -1,9 +1,11 @@
-import { Input, ButtonVariant } from '@coderan/cui-react';
+import {
+    Input as InputComponent,
+} from '@coderan/components-react';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-    title: 'Example/Form',
-    component: Input,
+    title: 'Example/Form/Input',
+    component: InputComponent,
     args: {
         label: 'Input',
     },
@@ -42,8 +44,7 @@ export default {
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Floating = {
-    component: Input,
+export const Input = {
     args: {
         // variant: ButtonVariant.PRIMARY,
     }

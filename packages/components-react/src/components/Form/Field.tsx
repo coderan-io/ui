@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren } from 'react';
 import { ClassValue, clsx } from 'clsx';
-import '@coderan/cui-styles/src/components/forms.scss';
+import '@coderan/component-styles/src/components/forms.scss';
 import { FieldProps } from './FieldProps';
 
 
@@ -26,8 +26,8 @@ export const Field: FC<PropsWithChildren<FormContainerProps>> = ({
     return (
         <div className={clsx(
             'cui-form__field',
-            hasValue && 'cui-form-field--has-value',
-            hasError && 'cui-form-field--has-error',
+            hasValue && 'cui-form__field--has-value',
+            hasError && 'cui-form__field--has-error',
             className,
         )} {...props}>
             {iconStart && (
@@ -35,7 +35,7 @@ export const Field: FC<PropsWithChildren<FormContainerProps>> = ({
                     {iconStart}
                 </span>
             )}
-            <div className="cui-form-input__wrapper">
+            <div className="cui-form-control__wrapper">
                 {floatingLabel && label && (
                     <label className="cui-form__label" htmlFor={inputId}>
                         {label}

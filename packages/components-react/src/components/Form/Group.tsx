@@ -1,6 +1,6 @@
 import { FC, HTMLAttributes, PropsWithChildren, useId } from 'react';
 import { ClassValue, clsx } from 'clsx';
-import '@coderan/cui-styles/src/components/forms.scss';
+import '@coderan/component-styles/src/components/forms.scss';
 import { GroupProps } from './GroupProps';
 
 export interface FormContainerProps extends GroupProps {
