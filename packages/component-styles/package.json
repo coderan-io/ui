@@ -28,5 +28,8 @@
         "vite": "7.3.0",
         "vite-plugin-dts": "4.5.4"
     },
+    "publishConfig": {
+        "access": "public"
+    },
     "gitHead": "ad8739d6d414df48dca9ef16f084711ddc07dd00"
 }
