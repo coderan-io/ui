@@ -1,6 +1,6 @@
 {
     "name": "@coderan/component-styles",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Themes for Coderan UI components",
     "scripts": {
         "build": "gulp build",
@@ -25,6 +25,5 @@
     },
     "publishConfig": {
         "access": "public"
-    },
-    "gitHead": "ad8739d6d414df48dca9ef16f084711ddc07dd00"
+    }
 }

@@ -1,6 +1,6 @@
 {
     "name": "@coderan/components-react",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
@@ -34,6 +34,5 @@
     ],
     "publishConfig": {
         "access": "public"
-    },
-    "gitHead": "cc1ea3889656c5a859c5f5b157542bf0ef9ef817"
+    }
 }
