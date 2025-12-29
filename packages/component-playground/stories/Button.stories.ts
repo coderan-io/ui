@@ -1,4 +1,4 @@
-import { Button, ButtonVariant } from '@coderan/components-react';
+import { Button, ButtonColor } from '@coderan/components-react';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
@@ -20,7 +20,7 @@ export default {
         loading: { control: 'boolean' },
         variant: {
             type: 'select',
-            options: Object.values(ButtonVariant)
+            options: Object.values(ButtonColor)
         },
         iconStart: {
             type: 'select',
@@ -36,9 +36,9 @@ export default {
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
+export const Default = {
     args: {
-        variant: ButtonVariant.PRIMARY,
+        variant: ButtonColor.PRIMARY,
         children: 'Primary Button'
     }
 };
