@@ -17,15 +17,17 @@
         }
     },
     "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "author": "Eran <info@coderan.nl>",
+    "license": "MIT",
     "dependencies": {
         "@coderan/component-styles": "^0.1.1",
         "clsx": "^2.1.0",
         "react": "^19.1.0"
     },
     "devDependencies": {
-        "@types/react": "^19.1.8"
+        "@types/node": "^25.0.3",
+        "@types/react": "^19.1.8",
+        "typescript-plugin-css-modules": "^5.2.0"
     },
     "files": [
         "dist"
