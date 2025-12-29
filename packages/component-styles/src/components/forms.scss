@@ -20,7 +20,6 @@
     border: solid 1px var(--cui-form-input-border-color);
     border-radius: var(--cui-default-border-radius);
     position: relative;
-    padding: 0 0.9rem;
     background-color: var(--cui-form-input-background-color);
 
     &:focus-within {
@@ -34,13 +33,19 @@
 
     &:focus-within, &.cui-form__field--has-value {
         .cui-form__label {
-            top: 0.4rem;
+            //top: 0.4rem;
             margin-left: -0.25rem;
-            transform: scale(0.8) translateY(0);
+            transform: scale(0.8) translateY(-0.9rem);
         }
 
         .cui-form__control {
-            padding: 1.4rem 0 0.4rem 0;
+            padding: 1.4rem 0.9rem 0.4rem 0.9rem;
+        }
+
+        .cui-form__textarea-wrapper {
+            .cui-form__label {
+                margin-left: -0.5rem;
+            }
         }
     }
 
@@ -63,7 +68,7 @@
 
 .cui-form__control {
     font-family: var(--cui-font-family), sans-serif;
-    padding: 0.9rem 0 0.9rem 0;
+    padding: 0.9rem;
     font-size: 0.9rem;
     line-height: 1.5;
     border: none;
@@ -94,9 +99,10 @@
         width: 12px;
         height: 12px;
         position: absolute;
-        right: 0;
+        right: 0.9rem;
         top: 50%;
         transform: translateY(-50%);
+        pointer-events: none;
     }
 }
 
@@ -104,21 +110,22 @@
     font-family: var(--cui-font-family), sans-serif;
     font-size: 0.9rem;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    left: 0;
     transition: all 0.1s;
     color: var(--cui-form-input-label-text-color);
     pointer-events: none;
+    padding: 0.9rem 0.9rem;
+    line-height: 1.5;
 }
 
 .cui-form__icon--start {
-    margin-right: 0.9rem;
+    margin: 0 0.9rem 0 0.9rem;
     display: flex;
     align-items: center;
 }
 
 .cui-form_icon--end {
-    margin-left: 0.9rem;
+    margin: 0 0.9rem 0 0.9rem;
     display: flex;
     align-items: center;
 }

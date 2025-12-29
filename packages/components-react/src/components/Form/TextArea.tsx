@@ -13,11 +13,11 @@ import { Group } from './Group';
 import { GroupProps } from './GroupProps';
 import { ClassValue } from 'clsx';
 
-export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, FieldProps, GroupProps {
+export interface TextAreaProps extends SelectHTMLAttributes<HTMLSelectElement>, FieldProps, GroupProps {
     groupClassName?: ClassValue;
 }
 
-export const Select: FC<PropsWithChildren<SelectProps>> = ({
+export const TextArea: FC<PropsWithChildren<TextAreaProps>> = ({
     groupClassName,
     label,
     iconStart,
@@ -39,23 +39,22 @@ export const Select: FC<PropsWithChildren<SelectProps>> = ({
             className={groupClassName}
         >
             <Field
-                controlWrapperClassName="cui-form__select-wrapper"
+                controlWrapperClassName="cui-form__textarea-wrapper"
                 label={label}
                 inputId={selectId}
                 hasValue={!!value}
                 iconStart={iconStart}
                 iconEnd={iconEnd}
                 hasError={!!errors}
-                labelAlwaysLikeFocus={true}
             >
-                <select
-                    className="cui-form__control cui-form__select"
+                <textarea
+                    className="cui-form__control"
                     id={selectId}
-                    onChange={(e: ChangeEvent<HTMLSelectElement>) => setValue(e.target.value)}
+                    onChange={(e: ChangeEvent<HTMLTextAreaElement>) => setValue(e.target.value)}
                     value={value}
                 >
                     {children}
-                </select>
+                </textarea>
             </Field>
         </Group>
     )
