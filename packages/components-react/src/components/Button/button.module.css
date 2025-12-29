@@ -8,48 +8,58 @@
     --cui-button-primary-background-color-active: hsl(from var(--cui-primary-color) h s calc(l * 0.80));
     --cui-button-primary-background-color-loading: hsl(from var(--cui-primary-color) h s l / 0.20);
     --cui-button-primary-text-color: #fff;
-    --cui-button-primary-text-color-loading: #fff;
+    --cui-button-primary-text-color-loading: hsl(from var(--cui-primary-color) h s l / 0.90);
     --cui-button-primary-loading-bar-background-color: var(--cui-button-primary-background-color);
 
-    --cui-button-secondary-background-color: transparent;
-    --cui-button-secondary-background-color-hover: hsl(from var(--cui-primary-color) h s l / 0.20);
-    --cui-button-secondary-background-color-active: hsl(from var(--cui-primary-color) h s l / 0.30);
-    --cui-button-secondary-text-color: var(--cui-button-primary-background-color);
+    --cui-button-secondary-background-color: rgba(0, 0, 0, .10);
+    --cui-button-secondary-background-color-hover: rgba(0, 0, 0, .20);
+    --cui-button-secondary-background-color-active: rgba(0, 0, 0, .30);
+    --cui-button-secondary-text-color: var(--cui-color-gray-900);
     --cui-button-secondary-background-color-loading: transparent;
     --cui-button-secondary-text-color-loading: var(--cui-button-secondary-background-color-active);
-    --cui-button-secondary-loading-bar-background-color: var(--cui-button-primary-background-color);
+    --cui-button-secondary-loading-bar-background-color: var(--cui-color-gray-900);
 
-    --cui-button-danger-background-color: var(--cui-danger-color);
-    --cui-button-danger-background-color-hover: hsl(from var(--cui-danger-color) h s calc(l * 0.90));
-    --cui-button-danger-background-color-active: hsl(from var(--cui-danger-color) h s calc(l * 0.80));
-    --cui-button-danger-text-color: #fff;
-    --cui-button-danger-background-color-loading: hsl(from var(--cui-danger-color) h s l / 0.20);
+    --cui-button-danger-background-color: hsl(from var(--cui-danger-color) h s l / 0.10);
+    --cui-button-danger-background-color-hover: hsl(from var(--cui-danger-color) h s l / 0.20);
+    --cui-button-danger-background-color-active: hsl(from var(--cui-danger-color) h s l / 0.30);
+    --cui-button-danger-text-color: hsl(from var(--cui-danger-color) h s calc(l * 0.50));
+    --cui-button-danger-background-color-loading: hsl(from var(--cui-danger-color) h s l / 0.10);
     --cui-button-danger-text-color-loading: #fff;
-    --cui-button-danger-loading-bar-background-color: var(--cui-button-danger-background-color);
+    --cui-button-danger-loading-bar-background-color: var(--cui-danger-color);
 
-    --cui-button-success-background-color: var(--cui-success-color);
-    --cui-button-success-background-color-hover: hsl(from var(--cui-success-color) h s calc(l * 0.90));
-    --cui-button-success-background-color-active: hsl(from var(--cui-success-color) h s calc(l * 0.80));
-    --cui-button-success-text-color: #fff;
-    --cui-button-success-background-color-loading: hsl(from var(--cui-success-color) h s l / 0.20);
+    --cui-button-success-background-color: hsl(from var(--cui-success-color) h s l / 0.10);
+    --cui-button-success-background-color-hover: hsl(from var(--cui-success-color) h s l / 0.20);
+    --cui-button-success-background-color-active: hsl(from var(--cui-success-color) h s l / 0.30);
+    --cui-button-success-text-color: var(--cui-success-color);
+    --cui-button-success-background-color-loading: hsl(from var(--cui-success-color) h s l / 0.10);
     --cui-button-success-text-color-loading: #fff;
-    --cui-button-success-loading-bar-background-color: var(--cui-button-success-background-color);
+    --cui-button-success-loading-bar-background-color: var(--cui-success-color);
+}
 
-    --cui-button-transparent-dark-background-color: transparent;
-    --cui-button-transparent-dark-text-color: var(--cui-color-gray-900);
-    --cui-button-transparent-dark-background-color-hover: rgba(0, 0, 0, 0.1);
-    --cui-button-transparent-dark-background-color-active: rgba(0, 0, 0, 0.2);
-    --cui-button-transparent-dark-background-color-loading: var(--cui-button-transparent-dark-background-color-hover);
-    --cui-button-transparent-dark-text-color-loading: var(--cui-button-transparent-dark-background-color-active);
-    --cui-button-transparent-dark-loading-bar-background-color: var(--cui-button-transparent-dark-text-color);
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cui-button-secondary-background-color: rgba(255, 255, 255, .10);
+        --cui-button-secondary-background-color-hover: rgba(255, 255, 255, .20);
+        --cui-button-secondary-background-color-active: rgba(255, 255, 255, .30);
+        --cui-button-secondary-text-color: #fff;
+        --cui-button-secondary-background-color-loading: transparent;
+        --cui-button-secondary-text-color-loading: var(--cui-button-secondary-background-color-active);
+        --cui-button-secondary-loading-bar-background-color: #fff;
 
-    --cui-button-transparent-light-background-color: transparent;
-    --cui-button-transparent-light-background-color-hover: rgba(255, 255, 255, 0.1);
-    --cui-button-transparent-light-background-color-active: rgba(255, 255, 255, 0.2);
-    --cui-button-transparent-light-text-color: #fff;
-    --cui-button-transparent-light-background-color-loading: var(--cui-button-transparent-light-background-color-hover);
-    --cui-button-transparent-light-text-color-loading: var(--cui-button-transparent-light-background-color-active);
-    --cui-button-transparent-light-loading-bar-background-color: var(--cui-button-transparent-light-text-color);
+        --cui-button-danger-background-color: hsl(from var(--cui-danger-color) h s l / 0.10);
+        --cui-button-danger-background-color-hover: hsl(from var(--cui-danger-color) h s l / 0.20);
+        --cui-button-danger-background-color-active: hsl(from var(--cui-danger-color) h s l / 0.30);
+        --cui-button-danger-text-color: var(--cui-danger-color);
+        --cui-button-danger-background-color-loading: hsl(from var(--cui-danger-color) h s l / 0.10);
+        --cui-button-danger-text-color-loading: var(--cui-color-gray-900);
+
+        --cui-button-success-background-color: hsl(from var(--cui-success-color) h s l / 0.10);
+        --cui-button-success-background-color-hover: hsl(from var(--cui-success-color) h s l / 0.20);
+        --cui-button-success-background-color-active: hsl(from var(--cui-success-color) h s l / 0.30);
+        --cui-button-success-text-color: var(--cui-success-color);
+        --cui-button-success-background-color-loading: hsl(from var(--cui-success-color) h s l / 0.10);
+        --cui-button-success-text-color-loading: var(--cui-color-gray-900);
+    }
 }
 
 .cuiButton {
@@ -60,7 +70,7 @@
     font-weight: var(--cui-button-font-weight);
     cursor: pointer;
     position: relative;
-    border: solid 1px transparent;
+    border: none;
     display: inline-flex;
     align-items: center;
     box-sizing: border-box;
@@ -76,7 +86,7 @@
             animation: loading 1s infinite;
             border-radius: var(--cui-default-border-radius);
             content: '';
-            height: 4px;
+            height: 5px;
             left: 0;
             position: absolute;
             top: 0;
@@ -86,189 +96,88 @@
 
     &.cuiButton--primary {
         background-color: var(--cui-button-primary-background-color);
-        border-color: var(--cui-button-primary-background-color);
         color: var(--cui-button-primary-text-color);
 
         &:hover {
             background: var(--cui-button-primary-background-color-hover);
-            border-color: var(--cui-button-primary-background-color-hover);
         }
 
         &:active {
             background: var(--cui-button-primary-background-color-active);
-            border-color: var(--cui-button-primary-background-color-active);
         }
 
         &.cuiButton--loading {
             background: var(--cui-button-primary-background-color-loading);
-            border-color: var(--cui-button-primary-background-color-loading);
             color: var(--cui-button-primary-text-color-loading);
 
             &:after {
                 background: var(--cui-button-primary-loading-bar-background-color);
-                border-color: var(--cui-button-primary-loading-bar-background-color);
             }
         }
     }
 
     &.cuiButton--secondary {
         background: var(--cui-button-secondary-background-color);
-        border-color: var(--cui-button-secondary-background-color);
         color: var(--cui-button-secondary-text-color);
 
         &:hover {
             background: var(--cui-button-secondary-background-color-hover);
-            border-color: var(--cui-button-secondary-background-color-hover);
         }
 
         &:active {
             background: var(--cui-button-secondary-background-color-active);
-            border-color: var(--cui-button-secondary-background-color-active);
         }
 
         &.cuiButton--loading {
             background: var(--cui-button-secondary-background-color-loading);
-            border-color: var(--cui-button-secondary-background-color-loading);
             color: var(--cui-button-secondary-text-color-loading);
 
             &:after {
                 background: var(--cui-button-secondary-loading-bar-background-color);
-                border-color: var(--cui-button-secondary-loading-bar-background-color);
-            }
-        }
-    }
-
-    &.cuiButton--success {
-        background: var(--cui-button-success-color);
-        border-color: var(--cui-button-success-color);
-        color: var(--cui-button-success-text-color);
-
-        &:hover {
-            background: var(--cui-button-success-color-hover);
-            border-color: var(--cui-button-success-color-hover);
-        }
-
-        &:active {
-            background: var(--cui-button-success-color-active);
-            border-color: var(--cui-button-success-color-active);
-        }
-
-        &.cuiButton--loading {
-            background: var(--cui-button-success-color-loading);
-            border-color: var(--cui-button-success-color-loading);
-            color: var(--cui-button-success-text-color-loading);
-
-            &:after {
-                background: var(--cui-button-success-color);
-                border-color: var(--cui-button-success-color);
-            }
-        }
-    }
-
-    &.cuiButton--danger {
-        background: var(--cui-button-danger-background-color);
-        border-color: var(--cui-button-danger-background-color);
-        color: var(--cui-button-danger-text-color);
-
-        &:hover {
-            background: var(--cui-button-danger-background-color-hover);
-            border-color: var(--cui-button-danger-background-color-hover);
-        }
-
-        &:active {
-            background: var(--cui-button-danger-background-color-active);
-            border-color: var(--cui-button-danger-background-color-active);
-        }
-
-        &.cuiButton--loading {
-            background: var(--cui-button-danger-background-color-loading);
-            border-color: var(--cui-button-danger-background-color-loading);
-            color: var(--cui-button-danger-text-color-loading);
-
-            &:after {
-                background: var(--cui-button-danger-background-color);
-                border-color: var(--cui-button-danger-background-color);
             }
         }
     }
 
     &.cuiButton--success {
         background: var(--cui-button-success-background-color);
-        border-color: var(--cui-button-success-background-color);
         color: var(--cui-button-success-text-color);
 
         &:hover {
             background: var(--cui-button-success-background-color-hover);
-            border-color: var(--cui-button-success-background-color-hover);
         }
 
         &:active {
             background: var(--cui-button-success-background-color-active);
-            border-color: var(--cui-button-success-background-color-active);
         }
 
         &.cuiButton--loading {
             background: var(--cui-button-success-background-color-loading);
-            border-color: var(--cui-button-success-background-color-loading);
             color: var(--cui-button-success-text-color-loading);
 
             &:after {
-                background: var(--cui-button-success-background-color);
-                border-color: var(--cui-button-success-background-color);
+                background: var(--cui-button-success-loading-bar-background-color);
             }
         }
     }
 
-    &.cuiButton--transparent-dark {
-        background: var(--cui-button-transparent-dark-background-color);
-        border-color: var(--cui-button-transparent-dark-background-color);
-        color: var(--cui-button-transparent-dark-text-color);
+    &.cuiButton--danger {
+        background: var(--cui-button-danger-background-color);
+        color: var(--cui-button-danger-text-color);
 
         &:hover {
-            background: var(--cui-button-transparent-dark-background-color-hover);
-            border-color: var(--cui-button-transparent-dark-background-color-hover);
+            background: var(--cui-button-danger-background-color-hover);
         }
 
         &:active {
-            background: var(--cui-button-transparent-dark-background-color-active);
-            border-color: var(--cui-button-transparent-dark-background-color-active);
+            background: var(--cui-button-danger-background-color-active);
         }
 
         &.cuiButton--loading {
-            color: var(--cui-button-transparent-dark-text-color-loading);
-            border-color: var(--cui-button-transparent-dark-background-color-loading);
-            background: var(--cui-button-transparent-dark-background-color-loading);
+            background: var(--cui-button-danger-background-color-loading);
+            color: var(--cui-button-danger-text-color-loading);
 
             &:after {
-                background: var(--cui-button-transparent-dark-loading-bar-background-color);
-                border-color: var(--cui-button-transparent-dark-loading-bar-background-color);
-            }
-        }
-    }
-
-    &.cuiButton--transparent-light {
-        background: var(--cui-button-transparent-light-background-color);
-        border-color: var(--cui-button-transparent-light-background-color);
-        color: var(--cui-button-transparent-light-text-color);
-
-        &:hover {
-            background: var(--cui-button-transparent-light-background-color-hover);
-            border-color: var(--cui-button-transparent-light-background-color-hover);
-        }
-
-        &:active {
-            background: var(--cui-button-transparent-light-background-color-active);
-            border-color: var(--cui-button-transparent-light-background-color-active);
-        }
-
-        &.cuiButton--loading {
-            color: var(--cui-button-transparent-light-text-color-loading);
-            border-color: var(--cui-button-transparent-light-background-color-loading);
-            background: var(--cui-button-transparent-light-background-color-loading);
-
-            &:after {
-                background: var(--cui-button-transparent-light-loading-bar-background-color);
-                border-color: var(--cui-button-transparent-light-loading-bar-background-color);
+                background: var(--cui-button-danger-loading-bar-background-color);
             }
         }
     }

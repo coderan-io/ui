@@ -18,7 +18,7 @@ export default {
     // More on argTypes: https://storybook.js.org/docs/api/argtypes
     argTypes: {
         loading: { control: 'boolean' },
-        variant: {
+        color: {
             type: 'select',
             options: Object.values(ButtonColor)
         },
@@ -38,7 +38,7 @@ export default {
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default = {
     args: {
-        variant: ButtonColor.PRIMARY,
+        color: ButtonColor.PRIMARY,
         children: 'Primary Button'
     }
 };
