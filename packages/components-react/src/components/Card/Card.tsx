@@ -1,11 +1,10 @@
-import { FC, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import { FC, HTMLAttributes, PropsWithChildren } from 'react';
 import styles from './card.module.css';
 import { clsx } from 'clsx';
 import { CardHeader } from './CardHeader';
 import { CardContent } from './CardContent';
 
-export interface CardProps extends HTMLAttributes<HTMLDivElement> {
-}
+export type CardProps = HTMLAttributes<HTMLDivElement>;
 
 export interface StaticCardComponents {
     Header: typeof CardHeader;
@@ -22,6 +21,7 @@ export const Card: FC<PropsWithChildren<CardProps>> & StaticCardComponents = ({
             className,
         )}
     >
+        foo
         {children}
     </div>
 )

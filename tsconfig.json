@@ -10,7 +10,11 @@
         "lib": [
             "ES2022",
             "DOM"
-        ]
+        ],
+//        "paths": {
+//            "@coderan/components-react": ["packages/components-react/src"],
+//            "@coderan/components-react/*": ["packages/components-react/src/*"],
+//        }
     },
     "exclude": [
         "packages/components-react/vite.config.ts"

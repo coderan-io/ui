@@ -1,11 +1,12 @@
-import { TextArea } from '@coderan/components-react';
+import { Button } from '../Button';
+import { ButtonColor } from '../ButtonColor';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-    title: 'Example/Form',
-    component: TextArea,
+    title: 'Example/Button',
+    component: Button,
     args: {
-        label: 'TextArea',
+        children: 'Button'
     },
     parameters: {
         // Optional parameter to center the component in the Canvas. More info:
@@ -17,8 +18,10 @@ export default {
     // tags: ['autodocs'],
     // More on argTypes: https://storybook.js.org/docs/api/argtypes
     argTypes: {
-        placeholder: {
-            control: 'text',
+        loading: { control: 'boolean' },
+        color: {
+            type: 'select',
+            options: Object.values(ButtonColor)
         },
         iconStart: {
             type: 'select',
@@ -29,20 +32,14 @@ export default {
             type: 'select',
             // font awesome icons as options
             options: ['👠', '👡', '👢', '👣', '👤', '👥', '👦', '👧', '👨', '👩', '👪', '👫', '👬', '👭', '👮', '👯', '👰', '👱', '👲', '👳', '👴', '👵', '👶', '👷', '👸', '👹', '👺', '👻', '👼', '👽', '👾', '👿', '💀', '💁', '💂', '💃', '💄', '💅', '💆', '💇', '💈', '💉', '💊', '💋', '💌', '💍', '💎', '💏', '💐', '💑', '💒', '💓', '💔', '💕', '💖', '💗', '💘', '💙', '💚', '💛', '💜', '💝', '💞', '💟', '💠', '💡', '💢', '💣', '💤', '💥', '💦', '💧', '💨', '💩', '💪', '💫', '💬', '💭', '💮', '💯', '💰', '💱', '💲', '💳', '💴', '💵', '💶', '💷', '💸', '💹', '💺', '💻', '💼', '💽', '💾', '💿', '📀', '📁', '📂', '📃', '📄', '📅', '📆', '📇', '📈', '📉', '📊',]
-        },
-        hint: {
-            control: 'text',
-            description: 'Additional hint text to display below the field, typically used for additional instructions or information. Default theme styles these as gray text.'
-        },
-        errors: {
-            //allow multiple errors
-            control: 'text',
         }
     }
 };
 
-export const Textarea = {
+// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+export const Default = {
     args: {
-        // variant: ButtonVariant.PRIMARY,
+        color: ButtonColor.PRIMARY,
+        children: 'Primary Button'
     }
 };

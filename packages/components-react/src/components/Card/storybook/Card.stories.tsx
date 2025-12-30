@@ -1,4 +1,6 @@
-import { Badge, Button, ButtonColor, Card, Color } from '@coderan/components-react';
+import { Card } from '../Card';
+import { Button } from '../../Button';
+import { Badge } from '../../Badge';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
