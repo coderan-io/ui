@@ -2,9 +2,9 @@
     "name": "@coderan/components-react",
     "version": "0.1.1",
     "description": "",
-    "module": "src/index.ts",
+    "module": "src/index.mjs",
     "types": "dist/index.d.ts",
-    "main": "src/index.ts",
+    "main": "dist/index.js",
     "scripts": {
         "build": "rm -rf dist && vite build",
         "test": "echo \"Error: no test specified\" && exit 1"
