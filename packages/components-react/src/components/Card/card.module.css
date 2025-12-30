@@ -14,7 +14,6 @@
     background-color: var(--cui-card-background-color);
     border-radius: var(--cui-default-border-radius);
     box-shadow: var(--cui-card-box-shadow);
-    border: solid 1px #eee;
 }
 
 .cuiCardHeader {
