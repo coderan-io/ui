@@ -10,7 +10,7 @@
         "lib": [
             "ES2022",
             "DOM"
-        ]
+        ],
     },
     "exclude": [
         "packages/components-react/vite.config.ts"

@@ -1,5 +1,5 @@
 storybook:
-  npm -w @coderan/component-playground run storybook
+  npm -w @coderan/component-playground run start
 
 watch-styles:
   npm -w @coderan/component-styles run watch
