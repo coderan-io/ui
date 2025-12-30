@@ -21,7 +21,6 @@ export const Card: FC<PropsWithChildren<CardProps>> & StaticCardComponents = ({
             className,
         )}
     >
-        foo
         {children}
     </div>
 )
