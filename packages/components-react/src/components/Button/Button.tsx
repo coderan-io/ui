@@ -3,10 +3,12 @@ import { clsx } from 'clsx';
 import styles from './button.module.css'
 import { ButtonColor } from './ButtonColor'
 import { ValueOf } from '../../utilities/types';
+import { Simple as SimpleLoader } from '../Loaders/Simple';
 
 export type ButtonProps = {
     color: ValueOf<typeof ButtonColor>;
     loading?: boolean;
+    loadingContent?: ReactNode;
     iconStart?: ReactNode;
     iconEnd?: ReactNode;
 }
@@ -14,6 +16,7 @@ export type ButtonProps = {
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({
     children,
     loading,
+    loadingContent,
     color,
     iconStart,
     iconEnd,
@@ -36,7 +39,9 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
                     )}
                 >{iconStart}</i>
             )}
-            <span className={styles.cuiButtonText}>{children}</span>
+            <span className={styles.cuiButtonText}>
+                {loading && loadingContent ? loadingContent : children}
+            </span>
             {iconEnd && (
                 <i
                     className={clsx(
@@ -44,6 +49,11 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
                         styles['cuiButtonIcon--end'],
                     )}
                 >{iconEnd}</i>
+            )}
+            {loading && (
+                <span className={styles.loadingContainer}>
+                    <SimpleLoader />
+                </span>
             )}
         </button>
     )
