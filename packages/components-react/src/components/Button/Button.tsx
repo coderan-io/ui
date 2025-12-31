@@ -51,7 +51,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
                 >{iconEnd}</i>
             )}
             {loading && (
-                <span className={styles.cuiButtonLoadingContainer}>
+                <span className={styles.loadingContainer}>
                     <SimpleLoader />
                 </span>
             )}

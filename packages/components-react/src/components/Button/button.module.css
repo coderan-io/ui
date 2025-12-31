@@ -81,7 +81,7 @@
         cursor: wait;
     }
 
-    .cuiButtonLoadingContainer {
+    .loadingContainer {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -104,7 +104,7 @@
             background: var(--cui-button-primary-background-color-loading);
             color: var(--cui-button-primary-text-color-loading);
 
-            .cuiButtonLoadingContainer {
+            .loadingContainer {
                 color: var(--cui-button-primary-loading-spinner-color);
             }
         }
@@ -126,7 +126,7 @@
             background: var(--cui-button-secondary-background-color-loading);
             color: var(--cui-button-secondary-text-color-loading);
 
-            .cuiButtonLoadingContainer {
+            .loadingContainer {
                 color: var(--cui-button-secondary-loading-spinner-color);
             }
         }
@@ -148,7 +148,7 @@
             background: var(--cui-button-success-background-color-loading);
             color: var(--cui-button-success-text-color-loading);
 
-            .cuiButtonLoadingContainer {
+            .loadingContainer {
                 color: var(--cui-button-success-loading-spinner-color);
             }
         }
@@ -170,7 +170,7 @@
             background: var(--cui-button-danger-background-color-loading);
             color: var(--cui-button-danger-text-color-loading);
 
-            .cuiButtonLoadingContainer {
+            .loadingContainer {
                 color: var(--cui-button-danger-loading-spinner-color);
             }
         }
