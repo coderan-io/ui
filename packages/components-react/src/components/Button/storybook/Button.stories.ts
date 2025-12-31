@@ -19,6 +19,7 @@ export default {
     // More on argTypes: https://storybook.js.org/docs/api/argtypes
     argTypes: {
         loading: { control: 'boolean' },
+        loadingContent: { control: 'text' },
         color: {
             type: 'select',
             options: Object.values(ButtonColor)

@@ -1,5 +1,3 @@
-@import "../../animations/animations.css";
-
 :root {
     --cui-button-font-weight: 500;
 
@@ -8,32 +6,32 @@
     --cui-button-primary-background-color-active: hsl(from var(--cui-primary-color) h s calc(l * 0.90));
     --cui-button-primary-background-color-loading: hsl(from var(--cui-primary-color) h s l / 0.20);
     --cui-button-primary-text-color: #fff;
-    --cui-button-primary-text-color-loading: hsl(from var(--cui-primary-color) h s l / 0.90);
-    --cui-button-primary-loading-bar-background-color: var(--cui-button-primary-background-color);
+    --cui-button-primary-text-color-loading: hsl(from var(--cui-primary-color) h s l / 0.80);
+    --cui-button-primary-loading-spinner-color: var(--cui-button-primary-background-color);
 
-    --cui-button-secondary-background-color: rgba(0, 0, 0, .10);
-    --cui-button-secondary-background-color-hover: rgba(0, 0, 0, .15);
-    --cui-button-secondary-background-color-active: rgba(0, 0, 0, .20);
+    --cui-button-secondary-background-color: hsla(0, 0%, 0%, 0.1);
+    --cui-button-secondary-background-color-hover: hsla(0, 0%, 0%, 0.15);
+    --cui-button-secondary-background-color-active: hsla(0, 0%, 0%, 0.2);
     --cui-button-secondary-text-color: var(--cui-color-gray-900);
     --cui-button-secondary-background-color-loading: transparent;
-    --cui-button-secondary-text-color-loading: var(--cui-button-secondary-background-color-active);
-    --cui-button-secondary-loading-bar-background-color: var(--cui-color-gray-900);
+    --cui-button-secondary-text-color-loading: hsla(0, 0%, 0%, 0.4);
+    --cui-button-secondary-loading-spinner-color: var(--cui-button-secondary-text-color);
 
     --cui-button-danger-background-color: hsl(from var(--cui-danger-color) h s l / 0.10);
     --cui-button-danger-background-color-hover: hsl(from var(--cui-danger-color) h s l / 0.15);
     --cui-button-danger-background-color-active: hsl(from var(--cui-danger-color) h s l / 0.20);
     --cui-button-danger-text-color: hsl(from var(--cui-danger-color) h s calc(l * 0.50));
     --cui-button-danger-background-color-loading: hsl(from var(--cui-danger-color) h s l / 0.10);
-    --cui-button-danger-text-color-loading: #fff;
-    --cui-button-danger-loading-bar-background-color: var(--cui-danger-color);
+    --cui-button-danger-text-color-loading: hsl(from var(--cui-danger-color) h s l / 0.50);;
+    --cui-button-danger-loading-spinner-color: var(--cui-button-danger-text-color);
 
     --cui-button-success-background-color: hsl(from var(--cui-success-color) h s l / 0.10);
     --cui-button-success-background-color-hover: hsl(from var(--cui-success-color) h s l / 0.15);
     --cui-button-success-background-color-active: hsl(from var(--cui-success-color) h s l / 0.20);
     --cui-button-success-text-color: var(--cui-success-color);
     --cui-button-success-background-color-loading: hsl(from var(--cui-success-color) h s l / 0.10);
-    --cui-button-success-text-color-loading: #fff;
-    --cui-button-success-loading-bar-background-color: var(--cui-success-color);
+    --cui-button-success-text-color-loading: hsl(from var(--cui-success-color) h s l / 0.50);
+    --cui-button-success-loading-spinner-color: var(--cui-button-success-text-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,17 +79,13 @@
 
     &.cuiButton--loading {
         cursor: wait;
+    }
 
-        &:after {
-            animation: loading 1s infinite;
-            border-radius: var(--cui-default-border-radius);
-            content: '';
-            height: 5px;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 100%;
-        }
+    .cuiButtonLoadingContainer {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0.5rem;
     }
 
     &.cuiButton--primary {
@@ -110,8 +104,8 @@
             background: var(--cui-button-primary-background-color-loading);
             color: var(--cui-button-primary-text-color-loading);
 
-            &:after {
-                background: var(--cui-button-primary-loading-bar-background-color);
+            .cuiButtonLoadingContainer {
+                color: var(--cui-button-primary-loading-spinner-color);
             }
         }
     }
@@ -132,8 +126,8 @@
             background: var(--cui-button-secondary-background-color-loading);
             color: var(--cui-button-secondary-text-color-loading);
 
-            &:after {
-                background: var(--cui-button-secondary-loading-bar-background-color);
+            .cuiButtonLoadingContainer {
+                color: var(--cui-button-secondary-loading-spinner-color);
             }
         }
     }
@@ -154,8 +148,8 @@
             background: var(--cui-button-success-background-color-loading);
             color: var(--cui-button-success-text-color-loading);
 
-            &:after {
-                background: var(--cui-button-success-loading-bar-background-color);
+            .cuiButtonLoadingContainer {
+                color: var(--cui-button-success-loading-spinner-color);
             }
         }
     }
@@ -176,8 +170,8 @@
             background: var(--cui-button-danger-background-color-loading);
             color: var(--cui-button-danger-text-color-loading);
 
-            &:after {
-                background: var(--cui-button-danger-loading-bar-background-color);
+            .cuiButtonLoadingContainer {
+                color: var(--cui-button-danger-loading-spinner-color);
             }
         }
     }
