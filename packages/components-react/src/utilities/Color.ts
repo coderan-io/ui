@@ -13,4 +13,3 @@ export const Color = {
     BLUE_GRAY: 'blueGray',
     GRAY: 'gray',
 } as const;
-

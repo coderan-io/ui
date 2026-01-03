@@ -1,9 +1,9 @@
 import type { FC, PropsWithChildren, ReactNode } from 'react';
 import { clsx } from 'clsx';
-import styles from './button.module.css'
-import { ButtonColor } from './ButtonColor'
+import styles from './button.module.css';
+import { ButtonColor } from './ButtonColor';
 import { ValueOf } from '../../utilities/types';
-import { Simple as SimpleLoader } from '../Loaders/Simple';
+import { Spinner as SimpleLoader } from '../Loaders/Spinner';
 
 export type ButtonProps = {
     color: ValueOf<typeof ButtonColor>;
@@ -11,7 +11,7 @@ export type ButtonProps = {
     loadingContent?: ReactNode;
     iconStart?: ReactNode;
     iconEnd?: ReactNode;
-}
+};
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({
     children,
@@ -37,7 +37,9 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
                         styles.cuiButtonIcon,
                         styles['cuiButtonIcon--start'],
                     )}
-                >{iconStart}</i>
+                >
+                    {iconStart}
+                </i>
             )}
             <span className={styles.cuiButtonText}>
                 {loading && loadingContent ? loadingContent : children}
@@ -48,7 +50,9 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
                         styles.cuiButtonIcon,
                         styles['cuiButtonIcon--end'],
                     )}
-                >{iconEnd}</i>
+                >
+                    {iconEnd}
+                </i>
             )}
             {loading && (
                 <span className={styles.loadingContainer}>
@@ -56,5 +60,5 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
                 </span>
             )}
         </button>
-    )
-}
+    );
+};

@@ -25,4 +25,4 @@ export const CardHeader: FC<PropsWithChildren<CardHeaderProps>> = ({
             </div>
         )}
     </div>
-)
+);

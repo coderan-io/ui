@@ -1,9 +1,8 @@
-import { FC, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import { FC, HTMLAttributes, PropsWithChildren } from 'react';
 import styles from './card.module.css';
 import { clsx } from 'clsx';
 
-export interface CardContentProps extends HTMLAttributes<HTMLDivElement> {
-}
+export type CardContentProps = HTMLAttributes<HTMLDivElement>;
 
 export const CardContent: FC<PropsWithChildren<CardContentProps>> = ({
     children,
@@ -17,4 +16,4 @@ export const CardContent: FC<PropsWithChildren<CardContentProps>> = ({
     >
         {children}
     </div>
-)
+);

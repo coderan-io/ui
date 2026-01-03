@@ -23,7 +23,7 @@ export const Card: FC<PropsWithChildren<CardProps>> & StaticCardComponents = ({
     >
         {children}
     </div>
-)
+);
 
 Card.Header = CardHeader;
 Card.Content = CardContent;

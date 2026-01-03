@@ -1,5 +1,5 @@
 import styles from './loading.module.css';
 
-export const Simple = () => {
+export const Spinner = () => {
     return <span className={styles.simpleLoader} />;
-}
+};
