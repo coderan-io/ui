@@ -1,4 +1,4 @@
-import { FC, InputHTMLAttributes, useId, useState } from 'react';
+import { ChangeEvent, FC, InputHTMLAttributes, useId, useState } from 'react';
 import { Field } from './Field';
 import styles from './form.module.css';
 import { FieldProps } from './FieldProps';
@@ -39,7 +39,7 @@ export const Input: FC<InputProps> = ({
                 className={fieldClasName}
                 label={label}
                 inputId={inputId}
-                hasValue={!! value}
+                hasValue={!!value}
                 iconStart={iconStart}
                 iconEnd={iconEnd}
                 hasError={hasError || (errors?.length && hasError !== false)}
@@ -54,11 +54,10 @@ export const Input: FC<InputProps> = ({
                     aria-placeholder={placeholder}
                     aria-label={label}
                     id={inputId}
-                    // TODO onchange
-                    onChange={(e) => setValue(e.target.value)}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
                     value={value}
                 />
             </Field>
         </Group>
-    )
-}
+    );
+};

@@ -26,12 +26,15 @@ export const Field: FC<PropsWithChildren<FormContainerProps>> = ({
     ...props
 }) => {
     return (
-        <div className={clsx(
-            styles.cuiFormField,
-            (hasValue || labelAlwaysLikeFocus) && styles['cuiFormField--filled'],
-            hasError && styles['cuiFormField--error'],
-            className,
-        )} {...props}>
+        <div
+            className={clsx(
+                styles.cuiFormField,
+                (hasValue || labelAlwaysLikeFocus) && styles['cuiFormField--filled'],
+                hasError && styles['cuiFormField--error'],
+                className,
+            )}
+            {...props}
+        >
             {iconStart && (
                 <span className={styles['cuiFormIcon--start']}>
                     {iconStart}
@@ -56,5 +59,5 @@ export const Field: FC<PropsWithChildren<FormContainerProps>> = ({
                 </span>
             )}
         </div>
-    )
-}
+    );
+};

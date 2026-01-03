@@ -4,7 +4,7 @@ import {
     PropsWithChildren,
     SelectHTMLAttributes,
     useId,
-    useState
+    useState,
 } from 'react';
 import { Field } from './Field';
 import styles from './form.module.css';
@@ -57,5 +57,5 @@ export const TextArea: FC<PropsWithChildren<TextAreaProps>> = ({
                 </textarea>
             </Field>
         </Group>
-    )
-}
+    );
+};

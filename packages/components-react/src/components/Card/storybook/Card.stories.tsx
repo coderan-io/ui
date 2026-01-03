@@ -7,35 +7,34 @@ export default {
     title: 'Example/Card',
     component: Card,
     args: {
-        children: 'Content'
+        children: 'Content',
     },
     parameters: {
         // Optional parameter to center the component in the Canvas. More info:
         // https://storybook.js.org/docs/configure/story-layout
-        layout: 'centered'
+        layout: 'centered',
     },
     // This component will have an automatically generated Autodocs entry:
     // https://storybook.js.org/docs/writing-docs/autodocs
     // tags: ['autodocs'],
     // More on argTypes: https://storybook.js.org/docs/api/argtypes
-    argTypes: {
-    }
+    argTypes: {},
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const With_Header = {
-    render: (args) => (
+    render: (args: Record<string, unknown>) => (
         <Card {...args}>
             <Card.Header>Header</Card.Header>
             <Card.Content>
                 Content
             </Card.Content>
         </Card>
-    )
+    ),
 };
 
 export const With_Header_Actions = {
-    render: (args) => (
+    render: (args: Record<string, unknown>) => (
         <Card {...args}>
             <Card.Header
                 actions={(
@@ -48,11 +47,11 @@ export const With_Header_Actions = {
             </Card.Header>
             <Card.Content>Content</Card.Content>
         </Card>
-    )
-}
+    ),
+};
 
 export const With_Header_Badge = {
-    render: (args) => (
+    render: (args: Record<string, unknown>) => (
         <Card {...args}>
             <Card.Header
                 actions={(
@@ -63,5 +62,5 @@ export const With_Header_Badge = {
             </Card.Header>
             <Card.Content>Content</Card.Content>
         </Card>
-    )
-}
+    ),
+};

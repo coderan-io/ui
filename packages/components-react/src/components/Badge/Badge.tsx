@@ -14,11 +14,13 @@ export const Badge: FC<PropsWithChildren<BadgeProps>> = ({
     color,
     children,
 }) => (
-    <div className={clsx(
-        styles.cuiBadge,
-        styles[`cuiBadge--${color}`],
-        className,
-    )}>
+    <div
+        className={clsx(
+            styles.cuiBadge,
+            styles[`cuiBadge--${color}`],
+            className,
+        )}
+    >
         {children}
     </div>
-)
+);

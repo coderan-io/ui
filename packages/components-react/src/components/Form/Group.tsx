@@ -1,4 +1,4 @@
-import { FC, HTMLAttributes, PropsWithChildren, useId } from 'react';
+import { FC, PropsWithChildren } from 'react';
 import { ClassValue, clsx } from 'clsx';
 import styles from './form.module.css';
 import { GroupProps } from './GroupProps';
@@ -30,7 +30,7 @@ export const Group: FC<PropsWithChildren<FormContainerProps>> = ({
                     <div className={styles.cuiFormError} key={index}>
                         {error}
                     </div>
-                )
+                );
             })}
             {hint && (
                 <div className={styles.cuiFormHint}>
@@ -38,5 +38,5 @@ export const Group: FC<PropsWithChildren<FormContainerProps>> = ({
                 </div>
             )}
         </div>
-    )
-}
+    );
+};

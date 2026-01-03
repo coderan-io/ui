@@ -1,5 +1,3 @@
-import { ReactNode } from 'react';
-
 export interface GroupProps {
     /**
      * Error message(s) to display below the field. Default theme styles these as red text.

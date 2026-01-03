@@ -4,7 +4,7 @@ import {
     PropsWithChildren,
     SelectHTMLAttributes,
     useId,
-    useState
+    useState,
 } from 'react';
 import { Field } from './Field';
 import styles from './form.module.css';
@@ -61,5 +61,5 @@ export const Select: FC<PropsWithChildren<SelectProps>> = ({
                 </select>
             </Field>
         </Group>
-    )
-}
+    );
+};

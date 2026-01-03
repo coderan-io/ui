@@ -4,4 +4,3 @@ export const Variant = {
     SUCCESS: 'success',
     DANGER: 'danger',
 } as const;
-
