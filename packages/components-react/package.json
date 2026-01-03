@@ -24,9 +24,7 @@
     "author": "Eran <info@coderan.nl>",
     "license": "MIT",
     "dependencies": {
-        "@coderan/component-styles": "^0.1.1",
-        "clsx": "^2.1.0",
-        "react": "^19.1.0"
+        "clsx": "^2.1.0"
     },
     "devDependencies": {
         "@stylistic/eslint-plugin": "^5.6.1",
@@ -36,6 +34,9 @@
         "eslint-plugin-react-hooks": "^7.0.1",
         "globals": "^17.0.0",
         "typescript-plugin-css-modules": "^5.2.0"
+    },
+    "peerDependencies": {
+        "react": "^19.0.0"
     },
     "files": [
         "dist"
