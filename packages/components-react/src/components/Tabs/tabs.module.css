@@ -1,7 +1,13 @@
+:root {
+    --cui-tab-hover-text-color: var(--cui-primary-color);
+    --cui-tab-active-text-color: var(--cui-primary-color);
+    --cui-tab-marker-color: var(--cui-primary-color);
+    --cui-tab-header-border-color: var(--cui-border-color);
 
+}
 .tabsHeader {
     display: flex;
-    border-bottom: 1px solid var(--cui-border-color);
+    border-bottom: 1px solid var(--cui-tab-header-border-color);
     position: relative;
     margin-bottom: 1rem;
 }
@@ -13,17 +19,17 @@
     color: inherit;
 
     &:hover {
-        color: var(--cui-primary-color);
+        color: var(--cui-tab-hover-text-color);
     }
 
     &.tabHeaderItem--active {
-        color: var(--cui-primary-color);
+        color: var(--cui-tab-active-text-color);
     }
 }
 
 .tabHeaderMarker {
     height: 3px;
-    background-color: var(--cui-primary-color);
+    background-color: var(--cui-tab-marker-color);
     transition: transform 0.3s ease, width 0.3s ease;
     position: absolute;
     bottom: -1px;
