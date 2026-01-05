@@ -1,8 +1,9 @@
 :root {
     --cui-tab-hover-text-color: var(--cui-primary-color);
     --cui-tab-active-text-color: var(--cui-primary-color);
-    --cui-tab-marker-color: var(--cui-primary-color);
     --cui-tab-header-border-color: var(--cui-border-color);
+    --cui-tab-marker-color: var(--cui-primary-color);
+    --cui-tab-marker-height: 3px;
 
 }
 .tabsHeader {
@@ -28,7 +29,7 @@
 }
 
 .tabHeaderMarker {
-    height: 3px;
+    height: var(--cui-tab-marker-height);
     background-color: var(--cui-tab-marker-color);
     transition: transform 0.3s ease, width 0.3s ease;
     position: absolute;
