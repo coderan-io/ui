@@ -5,6 +5,8 @@
     --cui-tab-marker-color: var(--cui-primary-color);
     --cui-tab-marker-height: 3px;
 
+    --internal_tab-marker-left-offset: 0px;
+
 }
 .tabsHeader {
     display: flex;
@@ -34,6 +36,6 @@
     transition: transform 0.3s ease, width 0.3s ease;
     position: absolute;
     bottom: -1px;
-    transform: translateX(var(--tab-marker-left-offset, 0px));
+    transform: translateX(var(--internal_tab-marker-left-offset, 0px));
     /*border-radius: var(--cui-default-border-radius) var(--cui-default-border-radius) 0 0;*/
 }

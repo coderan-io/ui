@@ -34,7 +34,7 @@ export const Tabs: FC<TabsProps> = ({
 
         const leftOffset = target.offsetLeft;
         tabHeaderMarkerRef.current.style.setProperty(
-            '--tab-marker-left-offset',
+            '--internal_tab-marker-left-offset',
             `${leftOffset}px`,
         );
     }
