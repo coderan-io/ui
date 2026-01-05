@@ -1,7 +1,10 @@
-import { FC, PropsWithChildren } from 'react';
-import { ClassValue, clsx } from 'clsx';
+import {
+    type FC,
+    type PropsWithChildren,
+} from 'react';
+import { type ClassValue, clsx } from 'clsx';
 import styles from './form.module.css';
-import { GroupProps } from './GroupProps';
+import { type GroupProps } from './GroupProps';
 
 export interface FormContainerProps extends GroupProps {
     className?: ClassValue;

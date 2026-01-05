@@ -23,7 +23,11 @@ export default tselint.config(
             indent: 4,
             semi: true,
             braceStyle: '1tbs'
-        })
+        }),
+        rules: {
+            "no-unused-vars": "off",
+            "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }],
+        }
     },
     reactHooks.configs.flat.recommended,
 );

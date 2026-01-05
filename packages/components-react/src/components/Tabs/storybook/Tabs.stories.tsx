@@ -1,7 +1,6 @@
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-import { Tabs } from '../Tabs';
-import { Tab } from '../Tab';
+import { Tabs, type Tab } from '../Tabs';
 
 export default {
     title: 'Example',
@@ -19,12 +18,27 @@ export default {
     }
 };
 
+const tabs: Tab[] = [
+    {
+        key: 'tab_one',
+        title: 'Tab 1',
+        content: 'tab one',
+    },
+    {
+        key: 'tab_two',
+        title: 'Veeery long second tab',
+        content: 'tab two',
+    },
+    {
+        key: 'tab_three',
+        title: 'Smaller 3rd tab',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda atque consequatur corporis distinctio, doloremque ducimus eius enim esse explicabo iste neque nobis pariatur quas quasi! Eligendi facilis maxime repellendus.',
+    }
+]
+
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Default_tabs = {
     render: ()=> (
-        <Tabs>
-            <Tab name="tab_one" title="Tab 1">tab one</Tab>
-            <Tab name="tab_two" title="Tab 2">tab two</Tab>
-        </Tabs>
+        <Tabs items={tabs} />
     )
 };

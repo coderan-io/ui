@@ -1,8 +1,12 @@
-import type { FC, PropsWithChildren, ReactNode } from 'react';
+import type {
+    type FC,
+    type PropsWithChildren,
+    type ReactNode,
+} from 'react';
 import { clsx } from 'clsx';
 import styles from './button.module.css';
 import { ButtonColor } from './ButtonColor';
-import { ValueOf } from '../../utilities/types';
+import { type ValueOf } from '../../utilities/types';
 import { Spinner as SimpleLoader } from '../Loaders/Spinner';
 
 export type ButtonProps = {

@@ -1,4 +1,8 @@
-import { FC, HTMLAttributes, PropsWithChildren } from 'react';
+import {
+    type FC,
+    type HTMLAttributes,
+    type PropsWithChildren,
+} from 'react';
 import styles from './card.module.css';
 import { clsx } from 'clsx';
 

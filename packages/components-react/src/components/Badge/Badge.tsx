@@ -1,4 +1,8 @@
-import { FC, HTMLAttributes, PropsWithChildren } from 'react';
+import {
+    type FC,
+    type HTMLAttributes,
+    type PropsWithChildren,
+} from 'react';
 import { clsx } from 'clsx';
 import styles from './badge.module.css';
 import { ValueOf } from '../../utilities/types';

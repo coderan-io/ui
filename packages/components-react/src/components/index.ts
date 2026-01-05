@@ -3,3 +3,4 @@ export * from './Form';
 export * from './Badge';
 export * from './Card';
 export * from './Loaders';
+export * from './Tabs';

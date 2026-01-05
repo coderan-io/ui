@@ -1,3 +1,32 @@
+
 .tabsHeader {
     display: flex;
+    border-bottom: 1px solid var(--cui-border-color);
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.tabHeaderItem {
+    padding: 1rem;
+    border: none;
+    background: none;
+    color: inherit;
+
+    &:hover {
+        color: var(--cui-primary-color);
+    }
+
+    &.tabHeaderItem--active {
+        color: var(--cui-primary-color);
+    }
+}
+
+.tabHeaderMarker {
+    height: 3px;
+    background-color: var(--cui-primary-color);
+    transition: transform 0.3s ease, width 0.3s ease;
+    position: absolute;
+    bottom: -1px;
+    transform: translateX(var(--tab-marker-left-offset, 0px));
+    /*border-radius: var(--cui-default-border-radius) var(--cui-default-border-radius) 0 0;*/
 }
