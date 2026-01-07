@@ -1,7 +1,7 @@
 import type {
-    type FC,
-    type PropsWithChildren,
-    type ReactNode,
+    FC,
+    PropsWithChildren,
+    ReactNode,
 } from 'react';
 import { clsx } from 'clsx';
 import styles from './button.module.css';

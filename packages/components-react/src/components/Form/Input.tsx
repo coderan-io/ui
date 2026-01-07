@@ -45,7 +45,7 @@ export const Input: FC<InputProps> = ({
                 className={fieldClasName}
                 label={label}
                 inputId={inputId}
-                hasValue={!!value}
+                hasValue={!! value}
                 iconStart={iconStart}
                 iconEnd={iconEnd}
                 hasError={hasError || (errors?.length && hasError !== false)}

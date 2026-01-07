@@ -1,7 +1,7 @@
 import {
     type FC,
     type ReactNode,
-    useCallback,
+    type MouseEvent,
     useEffect,
     useRef,
     useState,
@@ -17,12 +17,14 @@ export interface Tab {
 
 export interface TabsProps {
     items: Tab[];
-    beforeChange?: (currentTab: string, newTab: string) => boolean | Promise<boolean>;
-    afterChange?: (newTab: string, previousTab: string) => void;
+    beforeChange?: (fromTab: Tab, toTab: Tab) => boolean | Promise<boolean>;
+    afterChange?: (fromTab: Tab, toTab: Tab) => void;
 }
 
 export const Tabs: FC<TabsProps> = ({
     items,
+    beforeChange,
+    afterChange,
 }) => {
     const [currentTab, setCurrentTab] = useState<Tab>(items[0]);
 
@@ -37,13 +39,23 @@ export const Tabs: FC<TabsProps> = ({
             '--internal_tab-marker-left-offset',
             `${leftOffset}px`,
         );
-    }
+    };
 
-    const switchTab = useCallback((newTab: Tab, target: HTMLElement) => {
-        setCurrentTab(newTab);
+    const switchTab = async (toTab: Tab, target: HTMLElement): Promise<void> => {
+        const fromTab = currentTab;
+        if (
+            beforeChange
+            && ! (await beforeChange(fromTab, toTab))
+        ) {
+            return;
+        }
+
+        setCurrentTab(toTab);
 
         moveMarkerToTarget(target);
-    }, []);
+
+        afterChange?.(fromTab, toTab);
+    };
 
     useEffect(() => {
         setTimeout(() => {
@@ -52,8 +64,8 @@ export const Tabs: FC<TabsProps> = ({
             if (firstTab) {
                 moveMarkerToTarget(firstTab as HTMLElement);
             }
-        })
-    }, [switchTab]);
+        });
+    }, []);
 
     return (
         <>
@@ -66,7 +78,7 @@ export const Tabs: FC<TabsProps> = ({
                             styles.tabHeaderItem,
                             currentTab.key === tab.key && styles['tabHeaderItem--active'],
                         )}
-                        onClick={(e) => switchTab(tab, e.target as HTMLButtonElement)}
+                        onClick={(e: MouseEvent<HTMLButtonElement>) => switchTab(tab, e.target as HTMLButtonElement)}
                     >
                         {tab.title}
                     </button>
