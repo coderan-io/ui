@@ -81,7 +81,6 @@
     border: none;
     border-radius: var(--cui-default-border-radius);
     outline: none;
-    min-width: 180px;
     background: transparent;
     color: var(--cui-text-color);
     resize: vertical;
