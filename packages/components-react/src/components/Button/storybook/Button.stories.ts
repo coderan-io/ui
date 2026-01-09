@@ -5,7 +5,7 @@ const icons = ['👠', '👡', '👢', '👣', '👤', '👥', '👦', '👧', '
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-    title: 'Example/Button',
+    title: 'React/Components/Button',
     component: Button,
     args: {
         children: 'Button',
