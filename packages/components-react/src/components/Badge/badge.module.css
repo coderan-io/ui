@@ -107,6 +107,11 @@
     font-size: 0.75rem;
     border-radius: var(--cui-badge-border-radius);
 
+    &.cuiBadge--sm {
+        font-size: 0.625rem;
+        padding: 0.25rem 0.5rem;
+    }
+
     &.cuiBadge--primary {
         color: var(--cui-badge-primary-text-color);
         background-color: var(--cui-badge-primary-background-color);
