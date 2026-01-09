@@ -46,5 +46,4 @@
     position: absolute;
     bottom: -1px;
     transform: translateX(var(--internal_tab-marker-left-offset, 0px));
-    /*border-radius: var(--cui-default-border-radius) var(--cui-default-border-radius) 0 0;*/
 }

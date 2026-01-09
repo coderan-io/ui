@@ -70,6 +70,7 @@
 
 .cuiFormControlWrapper {
     position: relative;
+    width: stretch;
 }
 
 .cuiFormControl {
@@ -80,9 +81,10 @@
     border: none;
     border-radius: var(--cui-default-border-radius);
     outline: none;
-    min-width: 180px;
     background: transparent;
     color: var(--cui-text-color);
+    resize: vertical;
+    width: stretch;
 
     &:focus {
         padding: calc(0.9rem - 1px);

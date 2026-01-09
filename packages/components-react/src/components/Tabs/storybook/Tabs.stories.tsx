@@ -1,8 +1,9 @@
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 import { Tabs, type Tab } from '../Tabs';
+import { Badge } from '../../Badge';
 
 export default {
-    title: 'Example/Tabs',
+    title: 'React/Components/Tabs',
     component: Tabs,
     parameters: {
         // Optional parameter to center the component in the Canvas. More info:
@@ -19,8 +20,13 @@ export default {
 const tabs: Tab[] = [
     {
         key: 'tab_one',
-        title: 'Tab 1',
-        content: 'tab one',
+        title: (
+            <>
+                <span>👠</span>
+                <span>Tab one</span>
+            </>
+        ),
+        content: 'Tab one',
     },
     {
         key: 'tab_two',
@@ -38,5 +44,34 @@ const tabs: Tab[] = [
 export const Default = {
     render: () => (
         <Tabs items={tabs} />
+    ),
+};
+
+const tabsWithInspirationalHeaders: Tab[] = [
+    {
+        key: 'tab_one',
+        title: (
+            <>
+                <span>👠</span>
+                <span>Tab with icon</span>
+            </>
+        ),
+        content: 'Content of tab with icon',
+    },
+    {
+        key: 'tab_two',
+        title: (
+            <>
+                <span>Tab with badge</span>
+                <Badge color="red" size="sm">0</Badge>
+            </>
+        ),
+        content: 'Content of tab with badge',
+    },
+];
+
+export const Tabs_With_Inspirational_Headers = {
+    render: () => (
+        <Tabs items={tabsWithInspirationalHeaders} />
     ),
 };
