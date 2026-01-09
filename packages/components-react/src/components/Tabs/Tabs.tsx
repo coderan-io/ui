@@ -68,7 +68,7 @@ export const Tabs: FC<TabsProps> = ({
     }, []);
 
     return (
-        <>
+        <div className={styles.tabsContainer}>
             <div className={styles.tabsHeader} ref={tabsHeaderRef}>
                 {items.map((tab: Tab) => (
                     <button
@@ -86,6 +86,6 @@ export const Tabs: FC<TabsProps> = ({
                 <div className={styles.tabHeaderMarker} ref={tabHeaderMarkerRef} />
             </div>
             {currentTab.content}
-        </>
+        </div>
     );
 };

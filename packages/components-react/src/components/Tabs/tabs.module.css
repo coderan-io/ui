@@ -8,11 +8,17 @@
     --internal_tab-marker-left-offset: 0px;
 
 }
+.tabsContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 .tabsHeader {
     display: flex;
     border-bottom: 1px solid var(--cui-tab-header-border-color);
     position: relative;
     margin-bottom: 1rem;
+    width: stretch;
 }
 
 .tabHeaderItem {
