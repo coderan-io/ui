@@ -1,7 +1,10 @@
-import { FC, PropsWithChildren } from 'react';
-import { ClassValue, clsx } from 'clsx';
+import {
+    type FC,
+    type PropsWithChildren,
+} from 'react';
+import { type ClassValue, clsx } from 'clsx';
 import styles from './form.module.css';
-import { FieldProps } from './FieldProps';
+import { type FieldProps } from './FieldProps';
 
 export interface FormContainerProps extends FieldProps {
     inputId: string;

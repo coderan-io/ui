@@ -1,17 +1,17 @@
 import {
-    ChangeEvent,
-    FC,
-    PropsWithChildren,
-    SelectHTMLAttributes,
+    type ChangeEvent,
+    type FC,
+    type PropsWithChildren,
+    type SelectHTMLAttributes,
     useId,
     useState,
 } from 'react';
 import { Field } from './Field';
 import styles from './form.module.css';
-import { FieldProps } from './FieldProps';
+import { type FieldProps } from './FieldProps';
 import { Group } from './Group';
-import { GroupProps } from './GroupProps';
-import { ClassValue, clsx } from 'clsx';
+import { type GroupProps } from './GroupProps';
+import { type ClassValue, clsx } from 'clsx';
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement>, FieldProps, GroupProps {
     groupClassName?: ClassValue;

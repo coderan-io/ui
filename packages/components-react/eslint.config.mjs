@@ -2,28 +2,35 @@ import reactHooks from 'eslint-plugin-react-hooks';
 import tselint from 'typescript-eslint';
 import globals from 'globals';
 import stylistic from '@stylistic/eslint-plugin';
+import { defineConfig } from 'eslint/config';
 
-
-export default tselint.config(
+export default defineConfig([
     {
-        name: '1',
-        files: ['**/*.{ts,tsx,js,jsx}'],
+        files: ['**/*.{ts,tsx,mjs}'],
         languageOptions: {
             parserOptions: {
                 ecmaFeatures: {
-                    jsx: true
-                }
+                    jsx: true,
+                },
             },
-            globals: globals.browser
+            globals: globals.browser,
         },
         extends: [
-            tselint.configs.recommended
+            tselint.configs.recommended,
         ],
         ...stylistic.configs.customize({
             indent: 4,
             semi: true,
-            braceStyle: '1tbs'
-        })
+            braceStyle: '1tbs',
+        }),
+    },
+    {
+        files: ['**/*.{ts,tsx,mjs}'],
+        rules: {
+            'no-unused-vars': 'off',
+            '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+            '@stylistic/space-unary-ops': ['error', { words: false, nonwords: true }],
+        },
     },
     reactHooks.configs.flat.recommended,
-);
+]);

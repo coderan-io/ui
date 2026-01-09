@@ -12,6 +12,8 @@
     --cui-primary-color: var(--cui-color-deep-purple-300);
     --cui-danger-color: var(--cui-color-red-900);
     --cui-success-color: var(--cui-color-light-green-900);
+
+    --cui-border-color: var(--cui-color-gray-300);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +22,7 @@
         --cui-danger-color: var(--cui-color-red-200);
         --cui-success-color: var(--cui-color-green-400);
         --cui-text-color: #ffffff;
+        --cui-border-color: var(--cui-color-gray-700);
     }
     html {
         color: var(--cui-text-color);

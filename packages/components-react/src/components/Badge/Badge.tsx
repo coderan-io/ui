@@ -1,11 +1,14 @@
-import { FC, HTMLAttributes, PropsWithChildren } from 'react';
+import {
+    type FC,
+    type HTMLAttributes,
+    type PropsWithChildren,
+} from 'react';
 import { clsx } from 'clsx';
 import styles from './badge.module.css';
-import { ValueOf } from '../../utilities/types';
+import { type ValueOf } from '../../utilities/types';
 import { BadgeColor } from './BadgeColor';
 
 export interface BadgeProps extends HTMLAttributes<HTMLDivElement> {
-    // use the values of the Color object
     color?: ValueOf<typeof BadgeColor>;
 }
 
