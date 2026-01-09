@@ -26,6 +26,9 @@
     border: none;
     background: none;
     color: inherit;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 
     &:hover {
         color: var(--cui-tab-hover-text-color);

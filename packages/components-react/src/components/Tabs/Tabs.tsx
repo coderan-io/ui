@@ -32,9 +32,12 @@ export const Tabs: FC<TabsProps> = ({
     const tabHeaderMarkerRef = useRef<HTMLDivElement>(null);
 
     const moveMarkerToTarget = (target: HTMLElement): void => {
-        tabHeaderMarkerRef.current.style.width = `${target.clientWidth}px`;
+        const tabItemTarget = target
+            .closest<HTMLDivElement>(`.${styles.tabHeaderItem}`);
 
-        const leftOffset = target.offsetLeft;
+        tabHeaderMarkerRef.current.style.width = `${tabItemTarget.clientWidth}px`;
+
+        const leftOffset = tabItemTarget.offsetLeft;
         tabHeaderMarkerRef.current.style.setProperty(
             '--internal_tab-marker-left-offset',
             `${leftOffset}px`,
