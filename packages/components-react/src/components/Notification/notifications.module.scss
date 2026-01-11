@@ -1,0 +1,86 @@
+:root {
+    --cui-notification-background-color: #fff;
+    --cui-notification-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --cui-notification-gradient-danger-start-color: hsl(from var(--cui-color-red-600) h s l / 0.25);
+    --cui-notification-gradient-warning-start-color: hsl(from var(--cui-color-yellow-600) h s l / 0.25);
+    --cui-notification-gradient-info-start-color: hsl(from var(--cui-color-blue-600) h s l / 0.25);
+    --cui-notification-gradient-success-start-color: hsl(from var(--cui-color-green-600) h s l / 0.25);
+    --cui-notification-gradient-end-color: hsla(0, 0%, 100%, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cui-notification-background-color: var(--cui-color-gray-900);
+        --cui-notification-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+        --cui-notification-gradient-end-color: hsl(from var(--cui-color-gray-900) h s l / 1);
+    }
+}
+
+.cuiNotification {
+    display: flex;
+    background-color: var(--cui-notification-background-color);
+    border-radius: var(--cui-default-border-radius);
+    box-shadow: var(--cui-notification-box-shadow);
+    padding: 1rem;
+    gap: 0.75rem;
+
+    &.cuiNotification--success {
+        background-image: linear-gradient(135deg, var(--cui-notification-gradient-success-start-color) 0%,var(--cui-notification-gradient-end-color) 40%);
+
+        .cuiNotificationIconContainer {
+            color: var(--cui-color-green-600);
+        }
+    }
+
+    &.cuiNotification--danger {
+        background-image: linear-gradient(135deg, var(--cui-notification-gradient-danger-start-color) 0%, var(--cui-notification-gradient-end-color) 40%);
+
+        .cuiNotificationIconContainer {
+            color: var(--cui-color-red-600);
+        }
+    }
+
+    &.cuiNotification--warning {
+        background-image: linear-gradient(135deg, var(--cui-notification-gradient-warning-start-color) 0%, var(--cui-notification-gradient-end-color) 40%);
+
+        .cuiNotificationIconContainer {
+            color: var(--cui-color-yellow-600);
+        }
+    }
+
+    &.cuiNotification--info {
+        background-image: linear-gradient(135deg, var(--cui-notification-gradient-info-start-color) 0%, var(--cui-notification-gradient-end-color) 40%);
+
+        .cuiNotificationIconContainer {
+            color: var(--cui-color-blue-600);
+        }
+    }
+}
+
+.cuiNotificationIconContainer {
+    align-self: baseline;
+}
+
+.cuiNotificationIconFrame {
+    background: var(--cui-notification-background-color);
+    padding: 0.5rem;
+    align-self: baseline;
+    border-radius: 99999%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--cui-notification-box-shadow);
+    color: currentColor;
+}
+
+.cuiNotificationContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.cuiNotificationTitle {
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+}
