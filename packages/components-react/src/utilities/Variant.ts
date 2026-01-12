@@ -3,4 +3,6 @@ export const Variant = {
     SECONDARY: 'secondary',
     SUCCESS: 'success',
     DANGER: 'danger',
+    INFO: 'info',
+    WARNING: 'warning',
 } as const;

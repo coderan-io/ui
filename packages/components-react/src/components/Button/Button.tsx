@@ -15,6 +15,8 @@ export type ButtonProps = {
     loadingContent?: ReactNode;
     iconStart?: ReactNode;
     iconEnd?: ReactNode;
+    size?: 'sm';
+    onClick?: () => void;
 };
 
 export const Button: FC<PropsWithChildren<ButtonProps>> = ({
@@ -24,6 +26,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
     color,
     iconStart,
     iconEnd,
+    size,
     ...props
 }) => {
     return (
@@ -31,6 +34,7 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
             className={clsx(
                 styles.cuiButton,
                 styles[`cuiButton--${color}`],
+                size && styles[`cuiButton--${size}`],
                 loading && styles['cuiButton--loading'],
             )}
             {...props}
