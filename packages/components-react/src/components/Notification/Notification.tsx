@@ -1,4 +1,9 @@
-import type { FC, PropsWithChildren, ReactElement, ReactNode } from 'react';
+import {
+    type FC,
+    type PropsWithChildren,
+    type ReactElement,
+    type ReactNode,
+} from 'react';
 import styles from './notifications.module.scss';
 import type { ValueOf } from '../../utilities/types';
 import { NotificationVariant } from './NotificationVariant';
@@ -14,9 +19,9 @@ export interface NotificationProps {
     variant?: ValueOf<typeof NotificationVariant>;
     title: string;
     icon?: ReactNode;
-    withIconFrame?: boolean;
     closable?: boolean;
     onClose?: (id: string | undefined) => void;
+    actions?: ReactNode;
 }
 
 export const Notification: FC<PropsWithChildren<NotificationProps>> = ({
@@ -25,11 +30,11 @@ export const Notification: FC<PropsWithChildren<NotificationProps>> = ({
     variant,
     title,
     icon,
-    withIconFrame = true,
     closable,
     onClose,
+    actions,
 }) => {
-    const renderIcon = (): ReactElement => {
+    const renderIcon = (): ReactElement | undefined => {
         if (! variant && ! icon) {
             return undefined;
         }
@@ -43,15 +48,11 @@ export const Notification: FC<PropsWithChildren<NotificationProps>> = ({
                 }[variant])
             : undefined;
 
-        return withIconFrame
-            ? (
-                    <div className={styles.cuiNotificationIconFrame}>
-                        {icon || variantIcon}
-                    </div>
-                )
-            : (
-                    icon || variantIcon
-                );
+        return (
+            <div className={styles.cuiNotificationIconFrame}>
+                {icon || variantIcon}
+            </div>
+        );
     };
 
     return (
@@ -69,8 +70,13 @@ export const Notification: FC<PropsWithChildren<NotificationProps>> = ({
             <div className={styles.cuiNotificationContent}>
                 <span className={styles.cuiNotificationTitle}>{title}</span>
                 {children}
+                {actions && (
+                    <div className={styles.cuiNotificationActions}>
+                        {actions}
+                    </div>
+                )}
             </div>
-            <div className={styles.cuiNotificationActions}>
+            <div className={styles.cuiNotificationControls}>
                 {closable && (
                     <Button
                         color="secondary"

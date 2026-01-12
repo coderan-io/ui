@@ -63,16 +63,16 @@
 
 .cuiNotificationIconFrame {
     background: var(--cui-notification-background-color);
-    padding: 0.5rem;
     align-self: baseline;
     border-radius: 99999%;
-    width: 1.5rem;
-    height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: var(--cui-notification-box-shadow);
     color: currentColor;
+    padding: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .cuiNotificationContent {
@@ -86,6 +86,10 @@
 }
 
 .cuiNotificationActions {
+    margin-top: 0.5rem;
+}
+
+.cuiNotificationControls {
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -1,5 +1,6 @@
-import { Notification } from '../Notification';
+import { Notification, type NotificationProps } from '../Notification';
 import { NotificationVariant } from '../NotificationVariant';
+import { Button } from '../../Button';
 
 const icons = ['👠', '👡', '👢', '👣', '👤', '👥', '👦', '👧', '👨', '👩', '👪', '👫', '👬', '👭', '👮', '👯', '👰', '👱', '👲', '👳', '👴', '👵', '👶', '👷', '👸', '👹', '👺', '👻', '👼', '👽', '👾', '👿', '💀', '💁', '💂', '💃', '💄', '💅', '💆', '💇', '💈', '💉', '💊', '💋', '💌', '💍', '💎', '💏', '💐', '💑', '💒', '💓', '💔', '💕', '💖', '💗', '💘', '💙', '💚', '💛', '💜', '💝', '💞', '💟', '💠', '💡', '💢', '💣', '💤', '💥', '💦', '💧', '💨', '💩', '💪', '💫', '💬', '💭', '💮', '💯', '💰', '💱', '💲', '💳', '💴', '💵', '💶', '💷', '💸', '💹', '💺', '💻', '💼', '💽', '💾', '💿', '📀', '📁', '📂', '📃', '📄', '📅', '📆', '📇', '📈', '📉', '📊'];
 
@@ -20,6 +21,10 @@ export default {
         title: {
             control: 'text',
             defaultValue: 'Notification Title',
+        },
+        icon: {
+            type: 'select',
+            options: ['', ...icons],
         },
         variant: {
             type: 'select',
@@ -67,4 +72,23 @@ export const Info_With_Icon = {
         children: 'Here is some important information for you.',
         icon: 'ℹ️',
     },
+};
+
+export const With_Close_Button = {
+    args: {
+        variant: NotificationVariant.SUCCESS,
+        title: 'Article saved',
+        children: 'Your article has been successfully saved.',
+        id: 'notif-1',
+        closable: true,
+        onClose: (id: string) => alert(`Closed notification with id: ${id}`),
+    },
+    render: (args: NotificationProps) => (
+        <Notification
+            {...args}
+            actions={(
+                <Button color="danger" size="sm">Go to article</Button>
+            )}
+        />
+    ),
 };
