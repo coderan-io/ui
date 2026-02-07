@@ -24,13 +24,15 @@ export default defineConfig([
             braceStyle: '1tbs',
         }),
     },
+    reactHooks.configs.flat.recommended,
     {
         files: ['**/*.{ts,tsx,mjs}'],
         rules: {
             'no-unused-vars': 'off',
             '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
             '@stylistic/space-unary-ops': ['error', { words: false, nonwords: true }],
+            // @see https://github.com/facebook/react/issues/34775
+            'react-hooks/refs': 'off',
         },
     },
-    reactHooks.configs.flat.recommended,
 ]);
