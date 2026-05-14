@@ -47,6 +47,7 @@ export const Dropdown: FC<DropdownProps> & StaticDropdownComponents = ({
     const [referencedElement, setReferencedElement] = useState(null);
     const [floatingElement, setFloatingElement] = useState<HTMLDivElement | null>(null);
 
+    console.log(floatingElement)
     const context = useFloatingRootContext({
         open: isOpen,
         onOpenChange: setIsOpen,
@@ -65,7 +66,10 @@ export const Dropdown: FC<DropdownProps> & StaticDropdownComponents = ({
         handleClose: safePolygon(),
     });
     const dissmis = useDismiss(context, {
-        referencePressEvent: 'click'
+        referencePressEvent: 'click',
+        outsidePress: (event: MouseEvent): boolean => {
+            return !event.composedPath().includes(floatingElement);
+        },
     });
 
     const { getReferenceProps } = useInteractions([
@@ -92,6 +96,7 @@ export const Dropdown: FC<DropdownProps> & StaticDropdownComponents = ({
             )}
             <Popover
                 floatingContext={context}
+                setFloatingElement={setFloatingElement}
                 className={clsx(
                     styles.dropdown,
                     isOpen && styles['dropdown--open'],

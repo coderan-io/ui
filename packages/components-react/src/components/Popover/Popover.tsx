@@ -10,12 +10,14 @@ export interface PopoverProps {
     className: string;
     children: ReactNode;
     floatingContext: FloatingRootContext;
+    setFloatingElement: Ref<HTMLDivElement>;
     placement: Placement;
 }
 
 export const Popover: FC<PopoverProps> = ({
     className,
     floatingContext,
+    setFloatingElement,
     children,
     placement,
 }) => {
@@ -32,7 +34,7 @@ export const Popover: FC<PopoverProps> = ({
     return (
         <div
             className={className}
-            ref={refs.setFloating}
+            ref={setFloatingElement}
             style={floatingStyles}
         >
             {children}
