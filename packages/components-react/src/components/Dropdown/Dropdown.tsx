@@ -47,7 +47,6 @@ export const Dropdown: FC<DropdownProps> & StaticDropdownComponents = ({
     const [referencedElement, setReferencedElement] = useState(null);
     const [floatingElement, setFloatingElement] = useState<HTMLDivElement | null>(null);
 
-    console.log(floatingElement)
     const context = useFloatingRootContext({
         open: isOpen,
         onOpenChange: setIsOpen,
