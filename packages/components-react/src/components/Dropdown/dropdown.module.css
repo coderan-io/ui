@@ -1,0 +1,56 @@
+:root {
+    --cui-dropdown-border: var(--cui-border-color);
+    --cui-dropdown-background-color: var(--cui-background-color);
+    --cui-dropdown-item-background-color-hover: rgba(0, 0, 0, 0.1);
+    --cui-dropdown-item-background-color-active: rgba(0, 0, 0, 0.15);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cui-dropdown-background-color: var(--cui-color-gray-900);
+        --cui-dropdown-item-background-color-hover: rgba(255, 255, 255, .1);
+        --cui-dropdown-item-background-color-active: rgba(255, 255, 255, .15);
+    }
+}
+
+.cuiDropdown {
+    display: none;
+    width: max-content;
+    padding: 0.25rem;
+    background: var(--cui-dropdown-background-color);
+    border: solid 1px var(--cui-dropdown-border);
+    border-radius: var(--cui-default-border-radius);
+
+    &.cuiDropdown--open {
+        display: block;
+    }
+}
+
+.cuiDropdownItem {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: var(--cui-default-inner-border-radius);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    &:hover {
+        background-color: var(--cui-dropdown-item-background-color-hover);
+    }
+
+    &:active {
+        background-color: var(--cui-dropdown-item-background-color-active);
+    }
+}
+
+.cuiDropdownItemIcon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.cuiDivider {
+    height: 1px;
+    background-color: var(--cui-border-color);
+    margin: 0.5rem 0;
+    border: none;
+}

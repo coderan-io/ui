@@ -3,6 +3,7 @@
 
 :root {
     --cui-default-border-radius: 10px;
+    --cui-default-inner-border-radius: 5px;
     --cui-small-border-radius: 5px;
     --cui-font-family: "Inter";
 
@@ -22,7 +23,7 @@
         --cui-danger-color: var(--cui-color-red-200);
         --cui-success-color: var(--cui-color-green-400);
         --cui-text-color: #ffffff;
-        --cui-border-color: var(--cui-color-gray-700);
+        --cui-border-color: var(--cui-color-gray-800);
     }
     html {
         color: var(--cui-text-color);

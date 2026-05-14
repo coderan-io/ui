@@ -5,3 +5,4 @@ export * from './Form';
 export * from './Loaders';
 export * from './Notification';
 export * from './Tabs';
+export * from './Dropdown';

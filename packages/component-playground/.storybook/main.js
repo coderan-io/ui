@@ -1,3 +1,5 @@
+import { fileURLToPath } from "node:url";
+import { dirname } from "node:path";
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config = {
     stories: [
@@ -5,16 +7,19 @@ const config = {
         '../stories/**/*.stories.@(js|jsx|mjs|ts|tsx)',
         '../../components-react/src/**/*/*.stories.@(ts|tsx)',
     ],
+
     addons: [
-        '@storybook/addon-links',
-        '@storybook/addon-docs',
+        getAbsolutePath("@storybook/addon-links"),
+        getAbsolutePath("@storybook/addon-docs"),
     ],
+
     framework: {
-        name: '@storybook/react-vite',
+        name: getAbsolutePath("@storybook/react-vite"),
         options: {}
-    },
-    docs: {
-        autodocs: 'tag'
     }
 };
 export default config;
+
+function getAbsolutePath(value) {
+    return dirname(fileURLToPath(import.meta.resolve(`${value}/package.json`)));
+}

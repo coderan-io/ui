@@ -1,7 +1,8 @@
-import type {
-    FC,
-    PropsWithChildren,
-    ReactNode,
+import {
+    type ButtonHTMLAttributes,
+    type FC, forwardRef,
+    type PropsWithChildren,
+    type ReactNode,
 } from 'react';
 import { clsx } from 'clsx';
 import styles from './button.module.css';
@@ -9,7 +10,7 @@ import { ButtonColor } from './ButtonColor';
 import { type ValueOf } from '../../utilities/types';
 import { Spinner as SimpleLoader } from '../Loaders/Spinner';
 
-export type ButtonProps = {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     color: ValueOf<typeof ButtonColor>;
     loading?: boolean;
     loadingContent?: ReactNode;
@@ -17,9 +18,10 @@ export type ButtonProps = {
     iconEnd?: ReactNode;
     size?: 'sm';
     onClick?: () => void;
-};
+    children?: ReactNode;
+}
 
-export const Button: FC<PropsWithChildren<ButtonProps>> = ({
+export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
     children,
     loading,
     loadingContent,
@@ -28,9 +30,10 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
     iconEnd,
     size,
     ...props
-}) => {
+}, ref) => {
     return (
         <button
+            ref={ref}
             className={clsx(
                 styles.cuiButton,
                 styles[`cuiButton--${color}`],
@@ -69,4 +72,6 @@ export const Button: FC<PropsWithChildren<ButtonProps>> = ({
             )}
         </button>
     );
-};
+});
+
+Button.displayName = 'Button';

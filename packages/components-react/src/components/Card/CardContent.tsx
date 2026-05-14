@@ -6,7 +6,7 @@ import {
 import styles from './card.module.css';
 import { clsx } from 'clsx';
 
-export type CardContentProps = HTMLAttributes<HTMLDivElement>;
+export interface CardContentProps extends HTMLAttributes<HTMLDivElement> {}
 
 export const CardContent: FC<PropsWithChildren<CardContentProps>> = ({
     children,

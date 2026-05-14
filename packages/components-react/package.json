@@ -24,6 +24,7 @@
     "author": "Eran <info@coderan.nl>",
     "license": "MIT",
     "dependencies": {
+        "@floating-ui/react": "^0.27.16",
         "clsx": "^2.1.0"
     },
     "devDependencies": {
