@@ -64,7 +64,7 @@ export const Dropdown: FC<DropdownProps> & StaticDropdownComponents = ({
         enabled: 'hover' === triggerOn,
         handleClose: safePolygon(),
     });
-    const dissmis = useDismiss(context, {
+    const dismiss = useDismiss(context, {
         referencePressEvent: 'click',
         outsidePress: (event: MouseEvent): boolean => {
             return !event.composedPath().includes(floatingElement);
@@ -72,7 +72,7 @@ export const Dropdown: FC<DropdownProps> & StaticDropdownComponents = ({
     });
 
     const { getReferenceProps } = useInteractions([
-        dissmis,
+        dismiss,
         click,
         hover,
     ]);
@@ -97,8 +97,8 @@ export const Dropdown: FC<DropdownProps> & StaticDropdownComponents = ({
                 floatingContext={context}
                 setFloatingElement={setFloatingElement}
                 className={clsx(
-                    styles.dropdown,
-                    isOpen && styles['dropdown--open'],
+                    styles.cuiDropdown,
+                    isOpen && styles['cuiDropdown--open'],
                 )}
                 placement={placement}
             >
