@@ -1,4 +1,4 @@
-import type { FC, ReactNode } from 'react';
+import { type FC, type ReactNode } from 'react';
 import styles from './dropdown.module.css';
 
 export interface DropdownItemProps {
@@ -11,9 +11,9 @@ export const DropdownItem: FC<DropdownItemProps> = ({
     children,
 }) => {
     return (
-        <div className={styles.dropdownItem}>
+        <div className={styles.cuiDropdownItem}>
             {icon && (
-                <div className={styles.dropdownItemIcon}>
+                <div className={styles.cuiDropdownItemIcon}>
                     {icon}
                 </div>
             )}
