@@ -5,7 +5,7 @@ import {
     type ReactNode,
 } from 'react';
 import styles from './notifications.module.scss';
-import type { ValueOf } from '../../utilities/types';
+import { type ValueOf } from '../../utilities/types';
 import { NotificationVariant } from './NotificationVariant';
 import { clsx } from 'clsx';
 import { InfoIcon } from './InfoIcon';

@@ -8,7 +8,7 @@ import { clsx } from 'clsx';
 import { CardHeader } from './CardHeader';
 import { CardContent } from './CardContent';
 
-export type CardProps = HTMLAttributes<HTMLDivElement>;
+export interface CardProps extends HTMLAttributes<HTMLDivElement> {}
 
 export interface StaticCardComponents {
     Header: typeof CardHeader;

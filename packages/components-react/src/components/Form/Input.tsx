@@ -14,13 +14,13 @@ import { type ClassValue, clsx } from 'clsx';
 
 export interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'>, FieldProps, GroupProps {
     groupClassName?: ClassValue;
-    fieldClasName?: ClassValue;
+    fieldClassName?: ClassValue;
     onChange?: (value: string) => void;
 }
 
 export const Input: FC<InputProps> = ({
     groupClassName,
-    fieldClasName,
+    fieldClassName,
     placeholder,
     label,
     iconStart,
@@ -42,7 +42,7 @@ export const Input: FC<InputProps> = ({
             className={groupClassName}
         >
             <Field
-                className={fieldClasName}
+                className={fieldClassName}
                 label={label}
                 inputId={inputId}
                 hasValue={!! value}
