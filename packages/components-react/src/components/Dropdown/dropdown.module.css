@@ -1,13 +1,15 @@
 :root {
     --cui-dropdown-border: var(--cui-border-color);
     --cui-dropdown-background-color: var(--cui-background-color);
-    --cui-dropdown-item-background-color-hover: hsla(0, 0%, 0%, 0.1);
-    --cui-dropdown-item-background-color-active: hsla(0, 0%, 0%, 0.15);
+    --cui-dropdown-item-background-color-hover: rgba(0, 0, 0, 0.1);
+    --cui-dropdown-item-background-color-active: rgba(0, 0, 0, 0.15);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --cui-dropdown-background-color: var(--cui-color-gray-900);
+        --cui-dropdown-item-background-color-hover: rgba(255, 255, 255, .1);
+        --cui-dropdown-item-background-color-active: rgba(255, 255, 255, .15);
     }
 }
 
@@ -27,7 +29,7 @@
 .dropdownItem {
     padding: 0.5rem;
     cursor: pointer;
-    border-radius: var(--cui-default-border-radius);
+    border-radius: var(--cui-default-inner-border-radius);
     display: flex;
     gap: 0.5rem;
     align-items: center;
