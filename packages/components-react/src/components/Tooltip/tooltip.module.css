@@ -1,0 +1,25 @@
+:root {
+    --cui-tooltip-background-color: var(--cui-color-gray-900);
+    --cui-tooltip-text-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cui-tooltip-background-color: var(--cui-color-gray-700);
+    }
+}
+
+.cuiTooltip {
+    display: none;
+    padding: 0.375rem 0.625rem;
+    background-color: var(--cui-tooltip-background-color);
+    color: var(--cui-tooltip-text-color);
+    border-radius: var(--cui-default-border-radius);
+    font-size: 0.875rem;
+    max-width: 200px;
+    pointer-events: none;
+
+    &.cuiTooltip--visible {
+        display: block;
+    }
+}

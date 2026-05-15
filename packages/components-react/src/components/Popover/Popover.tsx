@@ -1,6 +1,8 @@
-import { type FC, type ReactNode, type Ref } from 'react';
+import { type FC, type ReactNode, type Ref, useRef } from 'react';
 import {
+    arrow,
     autoUpdate, flip,
+    FloatingArrow,
     type FloatingRootContext, offset, shift,
     useFloating,
 } from '@floating-ui/react';
@@ -12,7 +14,11 @@ export interface PopoverProps {
     floatingContext: FloatingRootContext;
     setFloatingElement: Ref<HTMLDivElement>;
     placement: Placement;
+    withArrow?: boolean;
 }
+
+const ARROW_HEIGHT = 7;
+const GAP = 2;
 
 export const Popover: FC<PopoverProps> = ({
     className,
@@ -20,14 +26,24 @@ export const Popover: FC<PopoverProps> = ({
     setFloatingElement,
     children,
     placement,
+    withArrow = false,
 }) => {
-    const { refs, floatingStyles } = useFloating({
+    const arrowElement = useRef<SVGSVGElement | null>(null);
+
+    const { floatingStyles, context, } = useFloating({
         rootContext: floatingContext,
         whileElementsMounted: autoUpdate,
         strategy: 'fixed',
-        middleware: [shift(), flip(), offset({
-            mainAxis: 4,
-        })],
+        middleware: [
+            shift(),
+            flip(),
+            offset({
+                mainAxis: withArrow ? ARROW_HEIGHT + GAP : GAP,
+            }),
+            ...(withArrow ? [arrow({
+                element: arrowElement,
+            })] : []),
+        ],
         placement,
     });
 
@@ -37,6 +53,9 @@ export const Popover: FC<PopoverProps> = ({
             ref={setFloatingElement}
             style={floatingStyles}
         >
+            {withArrow && (
+                <FloatingArrow ref={arrowElement} context={context} />
+            )}
             {children}
         </div>
     );
