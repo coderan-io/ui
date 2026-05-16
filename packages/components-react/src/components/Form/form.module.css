@@ -1,4 +1,8 @@
 :root {
+    --cui-form-base-font-size: var(--cui-m-font-size, 0.875rem);
+    --cui-form-error-font-size: var(--cui-form-base-font-size);
+    --cui-form-hint-font-size: var(--cui-sm-font-size, 0.75rem);
+
     --cui-form-input-border-color: var(--cui-color-gray-300);
     --cui-form-input-border-color-focus: var(--cui-primary-color);
 
@@ -76,7 +80,7 @@
 .cuiFormControl {
     font-family: var(--cui-font-family), sans-serif;
     padding: 0.9rem;
-    font-size: 0.9rem;
+    font-size: var(--cui-form-base-font-size);
     line-height: 1.5;
     border: none;
     border-radius: var(--cui-default-border-radius);
@@ -125,7 +129,7 @@
 
 .cuiFormLabel {
     font-family: var(--cui-font-family), sans-serif;
-    font-size: 0.9rem;
+    font-size: var(--cui-form-base-font-size);
     position: absolute;
     left: 0;
     transition: all 0.1s;
@@ -148,13 +152,13 @@
 }
 
 .cuiFormHint {
-    font-size: 0.8rem;
+    font-size: var(--cui-form-hint-font-size);
     color: var(--cui-form-hint-text-color);
     margin-top: 0.2rem;
 }
 
 .cuiFormError {
-    font-size: 0.8rem;
+    font-size: var(--cui-form-error-font-size);
     color: var(--cui-form-error-text-color);
     margin-top: 0.2rem;
 }

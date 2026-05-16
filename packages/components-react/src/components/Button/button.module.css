@@ -1,5 +1,7 @@
 :root {
     --cui-button-font-weight: 500;
+    --cui-button-base-font-size: var(--cui-m-font-size, 0.875rem);
+    --cui-button-sm-font-size: var(--cui-sm-font-size, 0.75rem);
 
     --cui-button-primary-background-color: var(--cui-primary-color);
     --cui-button-primary-background-color-hover: hsl(from var(--cui-primary-color) h s calc(l * 0.95));
@@ -62,10 +64,11 @@
 
 .cuiButton {
     padding: 0.75rem;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-size: var(--cui-button-base-font-size);
     border-radius: var(--cui-default-border-radius);
     font-weight: var(--cui-button-font-weight);
+    min-width: calc(2 * 0.75rem + 1lh);
+    justify-content: center;
     cursor: pointer;
     position: relative;
     border: none;
@@ -73,17 +76,14 @@
     align-items: center;
     box-sizing: border-box;
 
-    .cuiButtonText {
-        white-space: nowrap;
-    }
-
     &.cuiButton--loading {
         cursor: wait;
     }
 
     &.cuiButton--sm {
         padding: 0.5rem 0.75rem;
-        font-size: 0.8rem;
+        font-size: var(--cui-button-sm-font-size);
+        min-width: calc(2 * 0.5rem + 1lh);
     }
 
     .loadingContainer {
@@ -183,14 +183,18 @@
 
     .cuiButtonIcon {
         font-style: normal;
+    }
 
-        &.cuiButtonIcon--start {
-            margin-right: 0.5rem;
-        }
+    .cuiButtonText {
+        white-space: nowrap;
+    }
 
-        &.cuiButtonIcon--end {
-            margin-left: 0.5rem;
-        }
+    .cuiButtonIcon--start + .cuiButtonText {
+        margin-left: 0.5rem;
+    }
+
+    .cuiButtonText:has(~ .cuiButtonIcon--end) {
+        margin-right: 0.5rem;
     }
 
     &.cuiButton--loading .cuiButtonIcon--start, &.cuiButton--loading .cuiButtonIcon--end {
