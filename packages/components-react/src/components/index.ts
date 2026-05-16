@@ -6,3 +6,4 @@ export * from './Loaders';
 export * from './Notification';
 export * from './Tabs';
 export * from './Dropdown';
+export * from './Tooltip';
