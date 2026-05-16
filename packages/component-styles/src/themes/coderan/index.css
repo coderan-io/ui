@@ -6,7 +6,10 @@
     --cui-default-inner-border-radius: 5px;
     --cui-small-border-radius: 5px;
     --cui-font-family: "Inter";
+    --cui-default-line-height: 1.5;
     --cui-default-font-size: 14px;
+    --cui-m-font-size: 0.875rem;
+    --cui-sm-font-size: 0.75rem;
 
     --cui-background-color: #fff;
     --cui-text-color: var(--cui-color-gray-900);
@@ -38,4 +41,5 @@ html {
 
 body {
     background: var(--cui-background-color);
+    line-height: var(--cui-default-line-height);
 }

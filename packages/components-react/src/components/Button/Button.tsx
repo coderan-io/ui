@@ -52,9 +52,11 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(({
                     {iconStart}
                 </i>
             )}
-            <span className={styles.cuiButtonText}>
-                {loading && loadingContent ? loadingContent : children}
-            </span>
+            {(children || (loading && loadingContent)) && (
+                <span className={styles.cuiButtonText}>
+                    {loading && loadingContent ? loadingContent : children}
+                </span>
+            )}
             {iconEnd && (
                 <i
                     className={clsx(
