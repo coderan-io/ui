@@ -67,7 +67,6 @@
     font-size: var(--cui-button-base-font-size);
     border-radius: var(--cui-default-border-radius);
     font-weight: var(--cui-button-font-weight);
-    /*Match the height*/
     min-width: calc(2 * 0.75rem + 1lh);
     justify-content: center;
     cursor: pointer;
@@ -184,14 +183,6 @@
 
     .cuiButtonIcon {
         font-style: normal;
-
-        /*&.cuiButtonIcon--start {*/
-        /*    margin-right: 0.5rem;*/
-        /*}*/
-
-        /*&.cuiButtonIcon--end {*/
-        /*    margin-left: 0.5rem;*/
-        /*}*/
     }
 
     .cuiButtonText {
