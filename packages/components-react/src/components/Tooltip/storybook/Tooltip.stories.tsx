@@ -1,5 +1,6 @@
 import { Tooltip } from '../Tooltip';
 import { Button, ButtonColor } from '../../Button';
+import { Placement } from '../../Popover/Placement';
 
 export default {
     title: 'React/Components/Tooltip',
@@ -18,11 +19,11 @@ export const Default = {
     argTypes: {
         placement: {
             type: 'select',
-            options: ['top', 'bottom', 'left', 'right'],
+            options: Object.values(Placement),
         }
     },
     args: {
-        placement: 'bottm',
+        placement: 'top',
         content: 'Tooltip on bottom',
     },
     render: (args) => (
