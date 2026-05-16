@@ -87,7 +87,7 @@ export const With_Close_Button = {
         <Notification
             {...args}
             actions={(
-                <Button color="danger" size="sm">Go to article</Button>
+                <Button color="success" size="sm">Go to article</Button>
             )}
         />
     ),
