@@ -8,7 +8,6 @@ import {
     useState
 } from 'react';
 import {
-    useFocus,
     useFloatingRootContext,
     useHover,
     useInteractions,
@@ -47,9 +46,8 @@ export const Tooltip: FC<TooltipProps> = ({
     });
 
     const hover = useHover(context);
-    const focus = useFocus(context);
 
-    const { getReferenceProps } = useInteractions([hover, focus]);
+    const { getReferenceProps } = useInteractions([hover]);
 
     return (
         <>
