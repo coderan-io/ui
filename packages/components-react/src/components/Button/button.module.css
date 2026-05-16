@@ -82,7 +82,7 @@
 
     &.cuiButton--sm {
         padding: 0.5rem 0.75rem;
-        font-size: 0.8rem;
+        font-size: var(--cui-sm-font-size);
         min-width: calc(2 * 0.5rem + 1lh);
     }
 

@@ -1,4 +1,5 @@
 :root {
+    --cui-tooltip-default-font-size: var(--cui-sm-font-size, 0.75rem);
     --cui-tooltip-background-color: var(--cui-color-gray-900);
     --cui-tooltip-text-color: #fff;
 }
@@ -15,7 +16,7 @@
     background-color: var(--cui-tooltip-background-color);
     color: var(--cui-tooltip-text-color);
     border-radius: var(--cui-default-border-radius);
-    font-size: 0.875rem;
+    font-size: var(--cui-tooltip-default-font-size);
     max-width: 200px;
     pointer-events: none;
 

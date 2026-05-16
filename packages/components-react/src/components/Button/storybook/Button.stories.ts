@@ -36,6 +36,10 @@ export default {
             // font awesome icons as options
             options: icons,
         },
+        size: {
+            type: 'select',
+            options: ['sm'],
+        }
     },
 };
 
