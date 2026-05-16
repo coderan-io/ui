@@ -1,5 +1,6 @@
 :root {
     --cui-badge-border-radius: var(--cui-small-border-radius);
+    --cui-badge-base-font-size: var(--cui-sm-font-size, 0.75rem);
 
     --cui-badge-primary-text-color: var(--cui-primary-color);
     --cui-badge-primary-background-color: hsl(from var(--cui-badge-primary-text-color) h s l / 0.10);
@@ -104,11 +105,11 @@
 
 .cuiBadge {
     padding: 0.5rem;
-    font-size: 0.75rem;
+    font-size: var(--cui-badge-base-font-size);
     border-radius: var(--cui-badge-border-radius);
 
     &.cuiBadge--sm {
-        font-size: 0.625rem;
+        font-size: calc(var(--cui-badge-base-font-size) - 0.125rem);
         padding: 0.25rem 0.5rem;
     }
 
